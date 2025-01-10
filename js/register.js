@@ -9,18 +9,25 @@ form.addEventListener('submit', function (event) {
 
     const options = {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+          },
         body: JSON.stringify(data),
     }
 
-    fetch('http://delish-nutrio.onrender.com/api/register', options)
+    fetch('https://delish-nutrio.onrender.com/api/register', options)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                return response.text().then(text => {
+                    console.log(text);
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                });
             }
             return response.json();
         })
         .then(data => {  
-            console.log('Success:', data);  
+            console.log('Success:', data); 
+            window.location.href = '../verification.html'; 
         })  
         .catch(error => {  
             console.error('Error:', error);  

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/home/logo.svg">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html"> <img src="assets/home/logo.svg" alt="logo"></a> </div>
+            <div class="links">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-buttons">
+                
+                <button id="dash" onclick="window.location.href='dashboard.html'">MY DASHBOARD</button>
+                <button id="login"onclick="window.location.href='login.html'">LOGIN/REGISTER</button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="message"></div>
+
+    <script>
+        const message = document.getElementById('message');
+        async function verifyEmail() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+
+            if (!token) {
+                message.textContent = 'Invalid token.';
+                return;
+            }
+
+            try {
+                const response = await fetch(`delish-nutrio.onrender.com/api/verifyEmail?token=${token}`, {
+                    method: 'GET',
+                });
+
+                if (response.ok) {
+                    window.location.href = 'accountcreationsuccess.html';
+                } else {
+                    message.textContent = 'Invalid or expired token. Please request a new verification link.';
+                }
+            } catch (error) {
+                message.textContent = 'An error occurred. Please try again later.';
+            }
+        }
+
+        // Call the verify function when the page loads
+        window.onload = verifyEmail;
+    </script>
+</body>
+
+</html>
