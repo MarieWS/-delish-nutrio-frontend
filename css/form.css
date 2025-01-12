@@ -306,3 +306,19 @@
 .world-container {
     padding-top: 8rem;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .logo-container, .form-section, .inner-form-section, .gender-container, .location-container, .Dietary-container, .Activity-container, .Medical-container, .weight-container, .dob-container, .region-container, .health-container, .allergies-container, .height-container, .btn-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .logo-text, .form-section-header, .gender {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
