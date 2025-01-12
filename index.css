@@ -1,1 +1,170 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Body styles */
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #F1F1F1;
+    scroll-behavior: smooth;
+}
+
+/* Navbar styles */
+header {
+    background: red;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 40px;
+    margin-bottom: 0;
+}
+
+.links {
+    margin: auto;
+    padding-left: 40px;
+}
+
+.links li {
+    display: inline;
+}
+
+.links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.links li a:hover {
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 10px 10px;
+}
+
+.nav-buttons {
+    margin: auto 0;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons #dash {
+    background: red;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#dash:hover {
+    background: white;
+    border: 1px solid red;
+    color: red;
+}
+
+.nav-buttons #login {
+    background: white;
+    border: 1px solid red;
+    color: red;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login:hover {
+    background: red;
+    border: 1px solid white;
+    color: white;
+}
+
+/* Footer styles */
+footer {
+    margin: 10px 170px;
+    overflow: hidden;
+}
+
+.foot-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #0A142F;
+}
+
+.footer-links a:hover {
+    color: red;
+}
+
+.socials li {
+    display: inline;
+    margin-right: 15px;
+    font-size: 22px;
+}
+
+.footer-links li:first-child {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #0A142F;
+    margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    footer {
+        margin: 10px 20px;
+    }
+
+    .foot-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links, .socials {
+        text-align: center;
+    }
+
+    .footer-links li {
+        margin-bottom: 5px;
+    }
+}
