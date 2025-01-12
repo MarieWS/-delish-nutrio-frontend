@@ -46,7 +46,6 @@
     border: none;
 }
 
-
 /* Media queries for responsiveness */
 
 /* Styles for small screens */
@@ -83,4 +82,39 @@
     .contact-form {
         text-align: center;
     }
+}
+
+/* Footer Links Styles */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #0A142F;
+}
+
+.footer-links a:hover {
+    color: red;
+}
+
+/* Social Icons Styles */
+.socials li {
+    display: inline;
+    margin-right: 15px;
+    font-size: 22px;
+}
+
+/* Footer Copy Text Styles */
+.copy {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #0A142F;
+    margin-bottom: 20px;
 }
