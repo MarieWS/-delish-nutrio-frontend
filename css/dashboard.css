@@ -141,6 +141,16 @@ input {
     top: 5px;
 }
 
+/* New CSS for Form Container */
+.form-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
     .Container {
