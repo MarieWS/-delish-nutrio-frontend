@@ -17,6 +17,7 @@
 
 .hero-info h1 {
     font-size: 2rem;
+    font-size: clamp(2rem, 0.7179rem + 0.3419vw, 4rem);
     margin-bottom: 10px;
 }
 
