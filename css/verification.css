@@ -159,6 +159,48 @@ footer {
     background-color: #d32f2f;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .verification-box {
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .verification-container {
+        width: 90%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .confirm-button, .resend-button {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    footer {
+        margin-top: 50px;
+        font-size: 16px;
+    }
+}
+
 footer {
     margin-top: 20px;
     color: black;
