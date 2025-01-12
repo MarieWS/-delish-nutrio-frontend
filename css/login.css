@@ -1,18 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.logo{
+.logo {
     position: relative;
     top: 20px;
     left: 20px;
 }
-body{
+body {
     background-color: #F1F1F1;
     font-family: "Lato", serif;
 }
-.Container{
+.Container {
     display: grid;
     grid-template-columns: auto 400px;
     width: 75%;
@@ -20,32 +20,27 @@ body{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    
 }
-
-.welcome-section{
+.welcome-section {
     background: white;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-.welcome-image{
+.welcome-image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.login-text{
+.login-text {
     text-align: center;
     padding-top: 20px;
     margin-top: 10px;
 }
-
-.login-section{
+.login-section {
     background-color: #E9E9E9;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     text-align: center;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-
 }
 .login-section h2 {
     color: #333;
@@ -53,30 +48,22 @@ body{
     margin-top: 30px;
     margin-bottom: 5px;
 }
-
 .login-section p {
     color: #555;
     margin-bottom: 30px;
 }
-
 form {
     display: flex;
     flex-direction: column;
 }
-
 label {
-    /* margin-top: 10px;
-    margin-bottom: 0px;
-    margin-left: 20px; */
     color: #333;
     font-size: 14px;
     text-align: left;
     margin-left: 49px;
     font-weight: bold;
     margin-bottom: 5px;
-    
 }
-
 input {
     padding: 10px;
     margin-bottom: 15px;
@@ -87,7 +74,6 @@ input {
     margin-left: auto;
     margin-right: auto;
 }
-
 .forgot-password {
     text-align: left;
     font-size: 13px;
@@ -97,11 +83,9 @@ input {
     margin-bottom: 35px;
     margin-left: 49px;
 }
-
 .forgot-password:hover {
     text-decoration: underline;
 }
-
 .login-btn {
     background-color: #E53935;
     color: #fff;
@@ -115,18 +99,15 @@ input {
     margin-left: auto;
     margin-right: auto;
 }
-
 .login-btn:hover {
     background-color: #d32f2f;
 }
-
 .divider {
     text-align: center;
     margin: 20px 0;
     color: #888;
     font-size: 14px;
 }
-
 .google-btn {
     background-color: #fff;
     color: #E53935;
@@ -140,63 +121,50 @@ input {
     margin-left: auto;
     margin-right: auto;
 }
-
 .google-btn:hover {
     background-color: #fce4ec;
 }
-
 .create-account {
     font-size: 14px;
     color: #333;
 }
-
 .create-account a {
     color: #E53935;
     text-decoration: none;
 }
-
 .create-account a:hover {
     text-decoration: underline;
 }
-.google-icon{
+.google-icon {
     position: relative;
     top: 5px;
 }
-
-/* Responsive styles */
 @media (max-width: 768px) {
     .Container {
         grid-template-columns: 1fr;
         width: 90%;
         height: auto;
     }
-
     .welcome-section, .login-section {
         border-radius: 0;
     }
-
     .welcome-image, .login-text {
         padding-top: 10px;
         margin-top: 0;
     }
-
     .login-section h2 {
         padding-top: 5px;
         margin-top: 20px;
     }
-
     .login-section p {
         margin-bottom: 20px;
     }
-
     label {
         margin-left: 20px;
     }
-
     .forgot-password {
         margin-left: 20px;
     }
-
     .login-btn, .google-btn, input {
         width: 90%;
     }
