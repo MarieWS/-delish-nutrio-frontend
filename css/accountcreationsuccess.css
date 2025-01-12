@@ -63,3 +63,32 @@ body {
         border-radius: 0.5rem;
         text-transform: uppercase;
     } */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .logo-container {
+        margin: 20px 30px;
+    }
+
+    .image-logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .account-success {
+        padding: 20px;
+    }
+
+    .image-account {
+        width: 200px;
+    }
+
+    .acct-created {
+        font-size: 20px;
+    }
+
+    .btn {
+        height: 2.5rem;
+        width: 7rem;
+    }
+}
