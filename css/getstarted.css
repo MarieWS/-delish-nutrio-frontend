@@ -119,6 +119,48 @@ h4{
     transition: transform 0.2s ease; /* Smooth scaling effect */
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px 10px;
+    }
+
+    .title {
+        scale: 120%;
+    }
+
+    .icon {
+        scale: 35%;
+    }
+
+    .paragraph {
+        scale: 100%;
+        padding-top: 5px;
+        font-size: 14px;
+    }
+
+    .image-container {
+        flex-direction: column;
+        gap: 20px;
+        scale: 100%;
+        padding-top: 10px;
+    }
+
+    .tablemenu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Image-title01, .Image-title02, .Image-title03 {
+        width: 100%;
+    }
+
+    .button input[type="button"] {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
 .button input[type="button"]:hover {
     transform: scale(1.1);        /* Slightly scale up the button on hover */
 }
