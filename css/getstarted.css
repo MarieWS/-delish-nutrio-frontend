@@ -7,32 +7,31 @@
     font-family: lato;
     src: url(/Lato-Regular.ttf);
 }
-body{
+body {
     font-family: lato;
     font-size: 16px;
     padding: 30px 25px;
 }
 
-.container{
+.container {
     width: 100%;
     height: 100%;
     flex-direction: column;
     gap: 10px;
-
 }
 
-.title{
+.title {
     display: flex;
     justify-content: center;
     align-items: center;
     scale: 150%;
 }
 
-.icon{
+.icon {
     scale: 45%;
 }
 
-.paragraph{
+.paragraph {
     display: flex;
     justify-content: center;
     font-stretch: normal;
@@ -41,11 +40,11 @@ body{
     font-weight: lighter;
 }
 
-h4{
+h4 {
     margin-left: 5px;
 }
 
-.image-container{
+.image-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,68 +54,46 @@ h4{
     padding-bottom: 0px;
 }
 
-.tablemenu{
+.tablemenu {
     display: flex;
     justify-content: left;
     margin: 0;
 }
 
-
 .tablemenu {
-    display: flex;                /* Use flexbox for alignment */
-    align-items: center;          /* Center items vertically */
-    gap: 420px;                    /* Add space between the items */
+    display: flex;
+    align-items: center;
+    gap: 420px;
 }
 
 .Image-title01,
 .Image-title02,
 .Image-title03 {
-    display: flex;                /* Use flexbox for individual centering */
-    justify-content: center;      /* Center content horizontally */
-    width: 80%;                 /* Define width for inline space */ 
-    text-align: center;           /* Center text inside */
-    font-weight: bold;            /* Make text bold */
-}
-/* .btn-container {
-    width: 75%;
-    margin: auto;
-    margin-top: 1rem;
     display: flex;
-    justify-content: flex-end;
-} */
-
-
-
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+}
 
 .button {
-    display: flex;                /* Use flexbox for alignment */
-    justify-content: center;      /* Center the button horizontally */
-    align-items: center;          /* Center the button vertically */
-    height: 20vh;                /* Full viewport height */
-    margin: 0;                    /* Remove any default margins */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin: 0;
 }
 
-/* .btn {
-    background-color: #ff0000;
-    color: #fff;
-    height: 3rem;
-    width: 9rem;
-    border: none;
-    border-radius: 0.5rem;
-    text-transform: uppercase;
-} */
-
-
 .button input[type="button"] {
-    padding: 15px 30px;           /* Add padding for a larger button */
-    font-size: 18px;              /* Increase font size */
-    font-weight: bold;            /* Make the text bold */
-    color: #fff;                  /* Set text color to white */
-    background-color: #ff0000;    /* Set button background to red */
-    border: none;                 /* Remove border */
-    border-radius: 5px;           /* Rounded corners */
-    cursor: pointer;              /* Pointer cursor on hover */
-    transition: transform 0.2s ease; /* Smooth scaling effect */
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
 /* Responsive styles */
@@ -155,6 +132,10 @@ h4{
         width: 100%;
     }
 
+    .button {
+        height: auto;
+    }
+
     .button input[type="button"] {
         padding: 10px 20px;
         font-size: 16px;
@@ -162,7 +143,5 @@ h4{
 }
 
 .button input[type="button"]:hover {
-    transform: scale(1.1);        /* Slightly scale up the button on hover */
+    transform: scale(1.1);
 }
-
-
