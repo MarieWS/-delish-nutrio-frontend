@@ -21,6 +21,47 @@
     margin-bottom: 10px;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-info {
+        padding-top: 10%;
+    }
+
+    .hero-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .discussion, .trending {
+        margin: 20px;
+    }
+
+    .discuss-wrap {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .discuss-form {
+        margin: 20px;
+    }
+
+    .discuss-form input {
+        width: 70%;
+    }
+
+    .view {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .view button {
+        padding: 8px;
+    }
+}
+
 .hero-info button {
     background: red;
     border: none;
