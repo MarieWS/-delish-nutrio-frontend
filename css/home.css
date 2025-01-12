@@ -158,3 +158,51 @@
 .resources-card button:hover {
     transform: scale(1.05)
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-info {
+        margin-left: 20px;
+        padding-top: 10%;
+    }
+
+    .hero-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .features {
+        padding: 20px;
+    }
+
+    .feature-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .testimonials {
+        margin: 10px;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .test-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .resources {
+        margin: 10px;
+        padding-bottom: 50px;
+    }
+
+    .resources-wrapper {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
