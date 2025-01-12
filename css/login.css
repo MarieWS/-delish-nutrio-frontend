@@ -162,3 +162,42 @@ input {
     position: relative;
     top: 5px;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .Container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        height: auto;
+    }
+
+    .welcome-section, .login-section {
+        border-radius: 0;
+    }
+
+    .welcome-image, .login-text {
+        padding-top: 10px;
+        margin-top: 0;
+    }
+
+    .login-section h2 {
+        padding-top: 5px;
+        margin-top: 20px;
+    }
+
+    .login-section p {
+        margin-bottom: 20px;
+    }
+
+    label {
+        margin-left: 20px;
+    }
+
+    .forgot-password {
+        margin-left: 20px;
+    }
+
+    .login-btn, .google-btn, input {
+        width: 90%;
+    }
+}
