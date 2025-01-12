@@ -1,3 +1,4 @@
+/* Existing styles */
 .get-in-touch {
     margin: 60px 90px;
     margin-bottom: 100px;
@@ -45,3 +46,41 @@
     border: none;
 }
 
+
+/* Media queries for responsiveness */
+
+/* Styles for small screens */
+@media (max-width: 600px) {
+    .contact-wrap {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-form {
+        text-align: left;
+    }
+}
+
+/* Styles for medium screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .contact-wrap {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .contact-form {
+        text-align: center;
+    }
+}
+
+/* Styles for large screens */
+@media (min-width: 1025px) {
+    .contact-wrap {
+        grid-template-columns: 1fr 1fr;
+        gap: 200px;
+    }
+
+    .contact-form {
+        text-align: center;
+    }
+}
