@@ -127,3 +127,42 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    footer {
+        margin: 10px 20px;
+    }
+
+    .foot-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links, .socials {
+        text-align: center;
+    }
+
+    .footer-links li {
+        margin-bottom: 5px;
+    }
+}
