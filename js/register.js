@@ -4,14 +4,14 @@ form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const formData = new FormData(form);
-
     const data = Object.fromEntries(formData);
 
     const options = {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
-          },
+            'Content-Type': 'application/json',
+            'accept': 'application/json'
+        },
         body: JSON.stringify(data),
     }
 
@@ -25,11 +25,11 @@ form.addEventListener('submit', function (event) {
             }
             return response.json();
         })
-        .then(data => {  
-            console.log('Success:', data); 
-            window.location.href = '../verification.html'; 
-        })  
-        .catch(error => {  
-            console.error('Error:', error);  
-        }); 
-})
+        .then(data => {
+            console.log('Success:', data);
+            window.location.href = '../verification.html';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+});
