@@ -65,7 +65,7 @@ label {
     font-weight: bold;
     margin-bottom: 5px;
 }
-input {
+input, select {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #E53935;
@@ -204,7 +204,7 @@ input {
     .login-section p {
         font-size: 14px;
     }
-    input, .login-btn, .google-btn {
+    input, select, .login-btn, .google-btn {
         width: 90%;
     }
     label, .forgot-password {
@@ -222,7 +222,7 @@ input {
     .login-section p {
         font-size: 12px;
     }
-    input, .login-btn, .google-btn {
+    input, select, .login-btn, .google-btn {
         width: 95%;
     }
     label, .forgot-password {
