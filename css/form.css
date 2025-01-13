@@ -4,8 +4,6 @@
 
 .inner-container {
     padding-bottom: 5rem;
-
-
 }
 
 .logo-container {
@@ -21,7 +19,6 @@
     border-radius: 50%;
 }
 
-
 .logo-text {
     text-align: center;
     font-family: lato;
@@ -34,7 +31,6 @@
 }
 
 .form-section {
-
     background-color: #c7c0c03f;
     width: 65%;
     margin: auto;
@@ -53,7 +49,6 @@
     font-size: 1.4rem;
     font-family: lato;
     font-weight: 400;
-
 }
 
 .gender {
@@ -73,7 +68,6 @@
     margin-top: 1rem; */
     text-align: center;
     padding-top: 0.5rem;
-
 }
 
 .location-container {
@@ -180,7 +174,6 @@
     margin-top: 1rem;
     position: relative;
     right: 40px;
-
 }
 
 .dob {
@@ -199,7 +192,6 @@
     margin-top: 1rem;
     position: relative;
     right: 40px;
-
 }
 
 .region {
@@ -249,17 +241,14 @@
 }
 
 .height-container {
-
     width: 75%;
     margin: auto;
     margin-top: 1rem;
     position: relative;
     right: 40px;
-
 }
 
 .height {
-
     background-color: #fff;
     color: #686262;
     height: 3rem;
