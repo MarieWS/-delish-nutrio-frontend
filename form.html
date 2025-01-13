@@ -7,25 +7,11 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- Top Navigation Menu -->
-    <div class="topnav">
-        <a href="#home" class="active">Logo</a>
-        <div id="myLinks">
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
+    <!-- Your existing HTML code -->
     <section class="container">
         <div class="inner-container">
             <div class="logo-container">
@@ -73,7 +59,6 @@
                                 <span id="Weight"></span>
                             </div>
                         </div>
-
                         <div class="left-column">
                             <h2 class="form-section-header">when were you born?</h2>
                             <div class="dob-container">
@@ -103,7 +88,6 @@
                                 <span id="height-display"></span>
                             </div>
                         </div>
-
                         <div class="btn-container">
                             <button type="submit" class="btn">Proceed</button>
                         </div>
@@ -121,20 +105,18 @@
             const data = {};
             formData.forEach((value, key) => data[key] = value);
             
-            fetch('https://api.example.com/endpoint', {
-                method: 'POST',
+            fetch('http://delish-nutrio.onrender.com/api/profile', {
+                method: 'GET',
                 headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            }).then(response => response.json())
-              .then(result => {
-                  if(result.success) {
-                      // Handle success (e.g., redirect to another page)
-                  } else {
-                      // Handle failure
-                  }
-              }).catch(error => console.error('Error:', error));
+                    'accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Profile data:', data);
+                // Handle the profile data as needed
+            })
+            .catch(error => console.error('Error:', error));
         });
     </script>
 </body>
