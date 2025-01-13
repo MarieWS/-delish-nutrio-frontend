@@ -11,7 +11,7 @@ body {
     scroll-behavior: smooth;
 }
 
-        /* Navbar */
+/* Navbar */
 header {
     background: red;
 }
@@ -66,7 +66,6 @@ nav {
     color: red;
 }
 
-
 .nav-buttons #login {
     background: white;
     border: 1px solid red;
@@ -82,8 +81,7 @@ nav {
     color: white;
 }
 
-
-            /* FOOTER */
+/* FOOTER */
 footer {
     margin: 10px 170px;
     overflow: hidden;
