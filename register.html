@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="css/register.css">
     <script src="js/register.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
 </head>
-
 <body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
     <div class="Logo-container">
         <img src="images/Delish Nutrio 1 logo.png" alt="Logo">
     </div>
@@ -56,13 +70,6 @@
                     <input type="password" id="confirmPassword" name="confirmPassword">
                 </div>
                 <button id="sign-up-btn" type="submit"> Sign Up</button>
-
-                <!-- <button type="submit">SignUp</button> -->
-                <!-- <script>
-                    document.querySelector('sign-up-btn').addEventListener('click', function () {
-                        window.location.href='accountctreatinsuccess.html';
-                    });
-                </script> -->
             </form>
             <p>By clicking "SignUp", you agree that you have read the <a href="#">Privacy Policy</a> and have
                 reviewed and agree to <a href="#">Terms and conditions.</a></p>
@@ -70,5 +77,4 @@
     </div>
 
 </body>
-
 </html>
