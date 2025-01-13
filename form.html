@@ -92,6 +92,8 @@
                             <button type="submit" class="btn">Proceed</button>
                         </div>
                     </form>
+                    <button onclick="signUpWithEmail()">Sign Up with Email</button>
+                    <button onclick="signUpWithName()">Sign Up with Name</button>
                 </div>
             </div>
             <p class="information">We use this information to calculate <br> an accurate calorie goal for you</p>
@@ -118,6 +120,22 @@
             })
             .catch(error => console.error('Error:', error));
         });
+
+        function signUpWithEmail() {
+            const email = prompt("Enter your email:");
+            if (email) {
+                const data = { email: email };
+                signUp(data);
+            }
+        }
+
+        function signUpWithName() {
+            const name = prompt("Enter your name:");
+            if (name) {
+                const data = { name: name };
+                signUp(data);
+            }
+        }
 
         function signUp(data) {
             fetch('http://delish-nutrio.onrender.com/api/signup', {
