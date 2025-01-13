@@ -10,101 +10,42 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Top Navigation Menu -->
     <div class="topnav">
-        <a href="#home" class="active"></a>
-        <!-- Navigation links (hidden by default) -->
-        <div id="myLinks">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+        <!-- Navigation content -->
     </div>
 
     <div class="logo">
-        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g clip-path="url(#clip0_492_5080)">
-                <rect width="95.625" height="95.625" rx="47.8125" fill="white" />
-                <rect x="-12.0039" y="-12.002" width="119.63" height="119.63" fill="url(#pattern0_492_5080)" />
-            </g>
-            <defs>
-                <pattern id="pattern0_492_5080" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_492_5080" transform="scale(0.002)" />
-                </pattern>
-                <clipPath id="clip0_492_5080">
-                    <rect width="95.625" height="95.625" rx="47.8125" fill="white" />
-                </clipPath>
-                <image id="image0_492_5080" width="500" height="500" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAIAAABEtEjdAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAElGlUWHRYTUw6Y29tL[...]
-            </defs>
-        </svg>
+        <!-- Logo content -->
     </div>
+
     <div class="Container">
         <div class="welcome-section">
-            <h3 class="login-text">Your Path to Optimal Health <br>Starts Here!</h3>
-            <div class="welcome-image">
-                <img src="./Images/Login-image.png" alt="" height="400px">
-            </div>
+            <!-- Welcome section content -->
         </div>
         <div class="container">
             <div class="login-section">
-                <h2>Sign Up / Sign In</h2>
-                <p>Welcome! Please sign up or sign in to continue</p>
+                <!-- Login section content -->
                 <form id="auth-form">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
-
-                    <label for="email">Email (optional for sign-in)</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email">
-
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-
-                    <button type="submit" class="auth-btn">Sign Up / Sign In</button>
+                    <!-- Form content -->
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Button to open the modal login form -->  
-    <button onclick="document.getElementById('id01').style.display='block'">Login</button>  
-  
-    <!-- The Modal -->  
-    <div id="id01" class="modal">  
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>  
-  
-        <!-- Modal Content -->  
-        <form class="modal-content animate" action="/action_page.php">  
-            <div class="imgcontainer">  
-                <img src="avatar.png" alt="Avatar" class="avatar">  
-            </div>  
-  
-            <div class="container">  
-                <label for="uname"><b>Username</b></label>  
-                <input type="text" placeholder="Enter Username" name="uname" required>  
-  
-                <label for="psw"><b>Password</b></label>  
-                <input type="password" placeholder="Enter Password" name="psw" required>  
-  
-                <button type="submit">Login</button>  
-                <label>  
-                    <input type="checkbox" checked="checked" name="remember"> Remember me  
-                </label>  
-            </div>  
-  
-            <div class="container" style="background-color:#f1f1f1">  
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>  
-                <span class="psw">Forgot <a href="#">password?</a></span>  
-            </div>  
-        </form>  
-    </div>  
-  
+    <!-- Modal content -->
+    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content animate" action="/action_page.php">
+            <!-- Modal form content -->
+        </form>
+    </div>
+
+    <!-- Script for form submission -->
     <script>
         const authForm = document.getElementById('auth-form');
         authForm.addEventListener('submit', (e) => {
@@ -133,6 +74,13 @@
                 alert('An error occurred. Please try again.');
             });
         });
+
+        var modal = document.getElementById('id01');  
+        window.onclick = function(event) {  
+            if (event.target == modal) {  
+                modal.style.display = "none";  
+            }  
+        }  
     </script>
 </body>
 </html>
