@@ -118,6 +118,72 @@
             })
             .catch(error => console.error('Error:', error));
         });
+
+        function signUp(data) {
+            fetch('http://delish-nutrio.onrender.com/api/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json())
+              .then(result => {
+                  if(result.success) {
+                      // Handle success
+                  } else {
+                      // Handle failure
+                  }
+              }).catch(error => console.error('Error:', error));
+        }
+
+        function logIn(data) {
+            fetch('http://delish-nutrio.onrender.com/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json())
+              .then(result => {
+                  if(result.success) {
+                      // Handle success
+                  } else {
+                      // Handle failure
+                  }
+              }).catch(error => console.error('Error:', error));
+        }
+
+        function updateProfile(data) {
+            fetch('http://delish-nutrio.onrender.com/api/updateprofile', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.json())
+              .then(result => {
+                  if(result.success) {
+                      // Handle success
+                  } else {
+                      // Handle failure
+                  }
+              }).catch(error => console.error('Error:', error));
+        }
+
+        function generateMeal() {
+            fetch('http://delish-nutrio.onrender.com/api/generatemeal', {
+                method: 'GET',
+                headers: {
+                    'accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Meal data:', data);
+                // Handle the meal data as needed
+            })
+            .catch(error => console.error('Error:', error));
+        }
     </script>
 </body>
 </html>
