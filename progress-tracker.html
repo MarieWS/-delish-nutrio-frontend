@@ -7,8 +7,24 @@
     <link rel="stylesheet" href="css/progress-tracker.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4c58d39949.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
 </head>
 <body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
     <header class="Header">
         <div class="Logo">
             <img src="images/logo.png" alt="Logo">
@@ -38,22 +54,21 @@
 
         </ul>
     </nav>
-        <main class="main-content">
-           <div class="grid-container">
-                <div>
-                    <h2>Your Current Health <br>Status</h2>
-                    <div class="Holder"><img src="./Images/Car Information.jpg" alt="" width="100%"></div>
-                    <h3 class="Wap">Weekly Activity Progress</h3>
-                    <div class="Holder"><img src="./Images/Group 240.jpg" alt="" width="100%"></div>
-                </div>
-                <div>
-                    <img src="./Images/Frame 427319296.jpg" alt="">
-                </div>
-                <div>
+    <main class="main-content">
+       <div class="grid-container">
+            <div>
+                <h2>Your Current Health <br>Status</h2>
+                <div class="Holder"><img src="./Images/Car Information.jpg" alt="" width="100%"></div>
+                <h3 class="Wap">Weekly Activity Progress</h3>
+                <div class="Holder"><img src="./Images/Group 240.jpg" alt="" width="100%"></div>
+            </div>
+            <div>
+                <img src="./Images/Frame 427319296.jpg" alt="">
+            </div>
+            <div>
 
-                </div>
-           </div>
-        </main>
-    </div>
+            </div>
+       </div>
+    </main>
 </body>
 </html>
