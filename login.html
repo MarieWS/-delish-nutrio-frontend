@@ -52,53 +52,46 @@
                 <img src="./Images/Login-image.png" alt="" height="400px">
             </div>
         </div>
+        <div class="container">
         <div class="login-section">
-           <div class="login-section">
-                <h2>Sign Up / Sign In</h2>
-                <p>Welcome! Please sign up or sign in to continue</p>
-                <form id="auth-form">
-                    <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <h2>Sign Up / Sign In</h2>
+            <p>Welcome! Please sign up or sign in to continue</p>
+            <form id="auth-form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
 
-                        <label for="email">Email (optional for sign-in)</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                <label for="email">Email (optional for sign-in)</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
 
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
-                        <button type="submit" class="auth-btn">Sign Up / Sign In</button>
-                </form>
-            </div>
+                <button type="submit" class="auth-btn">Sign Up / Sign In</button>
+            </form>
         </div>
     </div>
 
-    <script>
-        const authForm = document.getElementById('auth-form');
-        authForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-        const username = authForm.elements['username'].value;
-        const email = authForm.elements['email'].value;
+  <script>
+    const authForm = document.getElementById('auth-form');
+    authForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const emailOrPhone = authForm.elements['email'].value || authForm.elements['username'].value;
         const password = authForm.elements['password'].value;
 
-        // Determine if the user is signing up or signing in
-        const isSignUp = email ? true : false;
-
-        const endpoint = isSignUp ? '/api/signup' : '/api/login';
-        const payload = isSignUp ? { username, email, password } : { username, password };
-
-        fetch(endpoint, {
+        fetch('http://delish-nutrio.onrender.com/api/login', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'accept': 'application/json'
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify({ emailOrPhone, password })
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                window.location.href = isSignUp ? 'welcome.html' : 'dashboard.html';
+                window.location.href = 'dashboard.html';
             } else {
-                alert(`${isSignUp ? 'Sign up' : 'Login'} failed. Please check your credentials.`);
+                alert('Login failed. Please check your credentials.');
             }
         })
         .catch(error => {
@@ -106,7 +99,7 @@
             alert('An error occurred. Please try again.');
         });
     });
-    </script>
+</script>
 </body>
 
 </html>
