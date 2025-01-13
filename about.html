@@ -10,6 +10,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
     <link rel="icon" type="image/x-icon" href="assets/home/logo.svg">
+    
+    <style>
+        /* Add responsive styles */
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .hero-info, .mv-wrap, .team-wrap, .story, .values, .client-wrap {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .mv, .team-details, .values ul, .client-wrap img {
+            margin: 10px 0;
+        }
+
+        .values ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .values ul li {
+            margin-bottom: 10px;
+        }
+
+        .socials li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .topnav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .logo, .links, .nav-buttons, .foot-wrap, .footer-links ul {
+                display: block;
+                text-align: center;
+            }
+
+            .nav-buttons button {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .mv-wrap, .team-wrap, .client-wrap {
+                display: block;
+            }
+
+            .mv, .team-details, .values ul, .client-wrap img {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head><body>
    <!-- Top Navigation Menu -->
 <div class="topnav">
@@ -17,9 +75,9 @@
     <!-- Navigation links (hidden by default) -->
     <div id="myLinks">
         <a href="https://delish-nutrio-frontend.vercel.app/">Home</a>
-        <a href="#news"></a>
-        <a href="#contact"></a>
-        <a href="#about"></a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
     </div>
     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
