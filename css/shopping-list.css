@@ -23,13 +23,11 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-
 }
 
 h1 {
     margin: 0 3em; 
     font-size: 20px;
-    
 }
 
 .search-bar {
@@ -86,7 +84,6 @@ nav {
 nav ul li {
     padding: 1em;
     list-style-type: none;
-    
 }
 
 nav ul li img {
@@ -103,8 +100,8 @@ nav ul li a {
 nav ul li .active a {
     color: #e53935;
     font-weight: bold;
-    
 }
+
 .main-content {
     margin-left: 300px;
     margin-right: 500px;
@@ -112,13 +109,11 @@ nav ul li .active a {
     flex: 1;
 }
 
-
-
 .shopping-list-container {
-
     background-color:#dbd2d259;
     padding: 0;
 }
+
 .shopping-list-section {
     background-color: #fff;
     display: flex;
@@ -127,28 +122,30 @@ nav ul li .active a {
     height: 732px;
     top: 121px;
     left: 333px;
-    margin:auto;
+    margin: auto;
     margin-top: 0;
     text-align: center;
     border: none;
     border-radius: 1.5rem;
 }
+
 table {
     border-collapse: collapse;
-    width:1239px;
+    width: 1239px;
     font-family: lato;
-    font-size:larger;
-    font-weight:lighter;                
+    font-size: larger;
+    font-weight: lighter;                
 }
+
 th, td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #706c6c;
 }
+
 .table-head {
     color: rgb(152, 152, 243);
-
-}           
+}
 
 .total {
     color: #E53935;
