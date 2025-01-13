@@ -1,10 +1,12 @@
-* body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: lato,sans-serif;
     background-color: rgb(207, 201, 201);
-    
 }
 
 .Logo-container {
@@ -17,7 +19,6 @@
 }
 
 .container {
-    
     margin: auto 90px;
     margin-bottom: 90px;
     justify-content: center;
@@ -28,42 +29,31 @@
     display: flex;
 }
 
-
-
 .h2 {
     font-size: 24px;
-    
     margin-bottom: 30px;
-    
 }
 
 .Image-layout {
     text-align: center;
     margin-bottom: 30px;
-
 }
-
-
 
 .left-section {
     border-radius: 5px;
     background-color: #fff;
     text-align: center;
-    
 }
 
 .right-section {
     background-color: rgb(221, 212, 212);
     padding: 50px;
     border-radius: 5px;
-    
 }
 
 .black-arrow img {
     width: 20px;
 }
-
-
 
 h3 {
     text-align: center;
@@ -72,7 +62,6 @@ h3 {
 
 .Form-group {
     margin-bottom: 20px;
-    
 }
 
 .label {
@@ -143,7 +132,7 @@ p a {
     }
 
     h1 {
-        margin: 0 1em; 
+        margin: 0 1em;
         font-size: 18px;
     }
 
