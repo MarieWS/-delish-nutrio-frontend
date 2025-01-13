@@ -8,10 +8,25 @@
     <link rel="stylesheet" href="css/contact.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
     <link rel="icon" type="image/x-icon" href="assets/home/logo.svg">
-
 </head>
 <body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
     <header>
         <nav>
             <div class="logo"><a href="index.html"> <img src="assets/home/logo.svg" alt="logo"></a> </div>
@@ -24,9 +39,8 @@
                 </ul>
             </div>
             <div class="nav-buttons">
-                
                 <button id="dash" onclick="window.location.href='dashboard.html'">MY DASHBOARD</button>
-                <button id="login"onclick="window.location.href='login.html'">LOGIN/REGISTER</button>
+                <button id="login" onclick="window.location.href='login.html'">LOGIN/REGISTER</button>
             </div>
         </nav>
     </header>
@@ -42,7 +56,6 @@
                 <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
                 <textarea placeholder="TYPE YOUR MESSAGE HERE"></textarea>
                 <a href="message sent.html"><button>SEND MESSAGE</button></a>
-                
             </div>
             <div class="contact-others">
                 <img src="assets/contact/contact.png" alt="telephone" width="626px" height="379px">
@@ -55,47 +68,49 @@
         <details>
             <summary>Delish Nutrio</summary>
             <p>We are here to help with your health and nutrition. You want to achieve optimal health, we are here to guide and hold your hands on your journey, partner with us.</p>
-            </details>
+        </details>
     </section>
 
-   <footer>
-    <div class="foot-wrap">
-        <div class="logo"><a href="index.html"> <img src="assets/home/logo.svg" alt="logo"></a></div>
-        <div class="footer-links">
-            <ul>
-                <li><a href="about.html">Learn More</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="community.html">Community</a></li>
-            </ul>
+    <footer>
+        <div class="foot-wrap">
+            <div class="logo"><a href="index.html"> <img src="assets/home/logo.svg" alt="logo"></a></div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="about.html">Learn More</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="tickets.html">Tickets & Booking</a></li>
+                    <li><a href="education.html">Nutrition Education</a></li>
+                    <li><a href="mealplans.html">Meal Plans</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Office: <span style="font-weight: bold;">123-456-7890</span></a></li>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Social</a></li>
+                    <div class="socials">
+                        <li> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> </li>
+                        <li> <a href="#"><i class="fa-brands fa-square-instagram"></i></a> </li>
+                        <li> <a href="#"><i class="fa-brands fa-twitter"></i></a> </li>
+                        <li> <a href="#"><i class="fa-brands fa-youtube"></i></a> </li>
+                        <li> <a href="#"><i class="fa-brands fa-wordpress"></i></a> </li>
+                    </div>
+                </ul>
+            </div>
         </div>
-        <div class="footer-links">
-            <ul>
-                <li><a href="tickets.html">Tickets & Booking</a></li>
-                <li><a href="education.html">Nutrition Education</a></li>
-                <li><a href="mealplans.html">Meal Plans</a></li>
-                <li><a href="articles.html">Articles</a></li>
-            </ul>
-        </div>
-        <div class="footer-links">
-            <ul>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="#">Office: <span style="font-weight: bold;">123-456-7890</span></a></li>
-        </div>
-        <div class="footer-links">
-            <ul>
-                <li><a href="#">Social</a></li>
-                <div class="socials">
-                    <li> <a href="#"><i class="fa-brands fa-facebook-f"></i></a> </li>
-                    <li> <a href="#"><i class="fa-brands fa-square-instagram"></i></a> </li>
-                    <li> <a href="#"><i class="fa-brands fa-twitter"></i></a> </li>
-                    <li> <a href="#"><i class="fa-brands fa-youtube"></i></a> </li>
-                    <li> <a href="#"><i class="fa-brands fa-wordpress"></i></a> </li>
-                </div>
-            </ul>
-        </div>
-    </div>
-    <hr>
-    <p class="copy"> &copy; 2024 Delish Nutrio | All Rights Reserved </p>
-</footer>
+        <hr>
+        <p class="copy"> &copy; 2024 Delish Nutrio | All Rights Reserved </p>
+    </footer>
+</body>
+</html>
