@@ -1,23 +1,75 @@
+* {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+/* Existing CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: lato,sans-serif;
     background-color: rgb(207, 201, 201);
 }
-
 .Logo-container {
     margin: 36px 50px;
 }
-
 .Logo-container img {
     width: 60px;
     height: 60px;
 }
-
 .container {
     margin: auto 90px;
     margin-bottom: 90px;
@@ -28,47 +80,38 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
 }
-
 .h2 {
     font-size: 24px;
     margin-bottom: 30px;
 }
-
 .Image-layout {
     text-align: center;
     margin-bottom: 30px;
 }
-
 .left-section {
     border-radius: 5px;
     background-color: #fff;
     text-align: center;
 }
-
 .right-section {
     background-color: rgb(221, 212, 212);
     padding: 50px;
     border-radius: 5px;
 }
-
 .black-arrow img {
     width: 20px;
 }
-
 h3 {
     text-align: center;
     margin-bottom: 20px;
 }
-
 .Form-group {
     margin-bottom: 20px;
 }
-
 .label {
     display: block;
     margin-bottom: 5px;
 }
-
 input[type="text"],
 input[type="tel"],
 input[type="email"],
@@ -78,7 +121,6 @@ input[type="password"] {
     border: 1px solid #e53935;
     border-radius: 5px;
 }
-
 button {
     background-color: red;
     color: #f1f1f1;
@@ -88,17 +130,14 @@ button {
     cursor: pointer;
     width: 105%;
 }
-
 p {
     text-align: center;
     margin-top: 20px;
     font-size: 12px;
 }
-
 p a {
     color: #e53935;
 }
-
 /* Responsive styles */
 @media (max-width: 768px) {
     .container {
@@ -106,49 +145,39 @@ p a {
         margin: auto 20px;
         margin-bottom: 30px;
     }
-
     .right-section {
         padding: 20px;
     }
-
     .search-bar input {
         width: 100%;
         margin-left: 0;
     }
-
     .right-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
     }
-
     .right-header a {
         margin: 1em 0;
     }
-
     .Logo-container img {
         width: 50px;
         height: 50px;
     }
-
     h1 {
         margin: 0 1em;
         font-size: 18px;
     }
-
     .search-bar {
         width: 80%;
         margin: 1em 0;
     }
-
     .black-arrow img {
         width: 15px;
     }
-
     button {
         width: 100%;
     }
-
     p {
         font-size: 10px;
     }
