@@ -52,11 +52,37 @@
         </div>
         <div class="contact-wrap">
             <div class="contact-form">
-                <input type="text" name="text" placeholder="YOUR NAME" required>
-                <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
-                <textarea placeholder="TYPE YOUR MESSAGE HERE"></textarea>
-                <a href="message sent.html"><button>SEND MESSAGE</button></a>
-            </div>
+                <div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="uk">United Kingdom</option>
+      <option value="germany">Germany</option>
+      <option value="france">France</option>
+      <option value="italy">Italy</option>
+      <option value="japan">Japan</option>
+      <option value="china">China</option>
+      <option value="india">India</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+</div>
             <div class="contact-others">
                 <img src="assets/contact/contact.png" alt="telephone" width="626px" height="379px">
             </div>
@@ -112,5 +138,5 @@
         <hr>
         <p class="copy"> &copy; 2024 Delish Nutrio | All Rights Reserved </p>
     </footer>
-</body>
+</body> 
 </html>
