@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/register.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
 </head>
 <body>
     <!-- Top Navigation Menu -->
     <div class="topnav">
-        <a href="#" class="active"></a>
-        <!-- Navigation links (hidden by default) -->
-        <div id="myLinks">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+        <!-- Navigation content -->
     </div>
 
-    <div class="Logo-container">
-        <img src="images/Delish Nutrio 1 logo.png" alt="Logo">
+    <div class="logo">
+        <!-- Logo content -->
     </div>
 
     <div class="container">
@@ -40,7 +36,36 @@
                 <img src="images/blackarrow.png" alt="Black Arrow">
             </div>
             <h3>Welcome</h3>
-            <form action="action_page.php">
+
+            <!-- Login Form -->
+            <div class="login-section">
+                <form action="action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <form action="action_page.php" method="post">
                 <div class="container">
                     <h1>Register</h1>
                     <p>Please fill in this form to create an account.</p>
@@ -67,5 +92,5 @@
         </div>
     </div>
 
-</body>  
+</body>
 </html>
