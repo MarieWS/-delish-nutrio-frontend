@@ -1,4 +1,226 @@
-* {box-sizing: border-box}
+/* Bordered form */
+form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/* Existing CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", serif;
+  background-color: #F1F1F1;
+}
+.logo {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  height: auto;
+  margin: 20px auto;
+}
+.welcome-section, .login-section {
+  border-radius: 20px;
+  padding: 20px;
+}
+.welcome-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-text {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+.login-section {
+  background-color: #E9E9E9;
+  text-align: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.login-section h2 {
+  color: #333;
+  padding-top: 10px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+.login-section p {
+  color: #555;
+  margin-bottom: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  color: #333;
+  font-size: 14px;
+  text-align: left;
+  margin-left: 49px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #E53935;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.forgot-password {
+  text-align: left;
+  font-size: 13px;
+  color: black;
+  font-weight: 400;
+  text-decoration: none;
+  margin-bottom: 35px;
+  margin-left: 49px;
+}
+.forgot-password:hover {
+  text-decoration: underline;
+}
+.login-btn {
+  background-color: #E53935;
+  color: #fff;
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-btn:hover {
+  background-color: #d32f2f;
+}
+.auth-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.auth-btn:hover {
+  background-color: #45a049;
+}
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #888;
+  font-size: 14px;
+}
+.google-btn {
+  background-color: #fff;
+  color: #E53935;
+  padding: 10px;
+  border: 1px solid #E53935;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.google-btn:hover {
+  background-color: #fce4ec;
+}
+.create-account {
+  font-size: 14px;
+  color: #333;
+}
+.create-account a {
+  color: #E53935;
+  text-decoration: none;
+}
+.create-account a:hover {
+  text-decoration: underline;
+}
+.google-icon {
+  position: relative;
+  top: 5px;
+}
+@media (max-width: 768px) {
+  .Container {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .welcome-section, .login-section {
+    border-radius: 0;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .welcome-image, .login-text {
+    padding-top: 10px;
+    margin-top: 0;
+  }
+  .login-section h2 {
+    padding-top: 5px;
+    margin-top: 20px;
+  }
+  .login-section p {
+    margin-bottom: 20px;
+  }
+  label {
+    margin-left: 20px;
+  }
+  .forgot-password {
+    margin-left: 20px;
+  }
+  .login-btn, .google-btn, input {
+    width: 90%;
+  }
+}
 
 /* Add padding to containers */
 .container {
@@ -55,130 +277,130 @@ a {
 
 /* Existing CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    font-family: lato,sans-serif;
-    background-color: rgb(207, 201, 201);
+  font-family: lato,sans-serif;
+  background-color: rgb(207, 201, 201);
 }
 .Logo-container {
-    margin: 36px 50px;
+  margin: 36px 50px;
 }
 .Logo-container img {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
 .container {
-    margin: auto 90px;
-    margin-bottom: 90px;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
+  margin: auto 90px;
+  margin-bottom: 90px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 .h2 {
-    font-size: 24px;
-    margin-bottom: 30px;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 .Image-layout {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 .left-section {
-    border-radius: 5px;
-    background-color: #fff;
-    text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
 }
 .right-section {
-    background-color: rgb(221, 212, 212);
-    padding: 50px;
-    border-radius: 5px;
+  background-color: rgb(221, 212, 212);
+  padding: 50px;
+  border-radius: 5px;
 }
 .black-arrow img {
-    width: 20px;
+  width: 20px;
 }
 h3 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 .Form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
-    padding: 10px 10px 10px 10px;
-    border: 1px solid #e53935;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #e53935;
+  border-radius: 5px;
 }
 button {
-    background-color: red;
-    color: #f1f1f1;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 105%;
+  background-color: red;
+  color: #f1f1f1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 105%;
 }
 p {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
 }
 p a {
-    color: #e53935;
+  color: #e53935;
 }
 /* Responsive styles */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        margin: auto 20px;
-        margin-bottom: 30px;
-    }
-    .right-section {
-        padding: 20px;
-    }
-    .search-bar input {
-        width: 100%;
-        margin-left: 0;
-    }
-    .right-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    .right-header a {
-        margin: 1em 0;
-    }
-    .Logo-container img {
-        width: 50px;
-        height: 50px;
-    }
-    h1 {
-        margin: 0 1em;
-        font-size: 18px;
-    }
-    .search-bar {
-        width: 80%;
-        margin: 1em 0;
-    }
-    .black-arrow img {
-        width: 15px;
-    }
-    button {
-        width: 100%;
-    }
-    p {
-        font-size: 10px;
-    }
-}
+  .container {
+    flex-direction: column;
+    margin: auto 20px;
+    margin-bottom: 30px;
+  }
+  .right-section {
+    padding: 20px;
+  }
+  .search-bar input {
+    width: 100%;
+    margin-left: 0;
+  }
+  .right-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .right-header a {
+    margin: 1em 0;
+  }
+  .Logo-container img {
+    width: 50px;
+    height: 50px;
+  }
+  h1 {
+    margin: 0 1em;
+    font-size: 18px;
+  }
+  .search-bar {
+    width: 80%;
+    margin: 1em 0;
+  }
+  .black-arrow img {
+    width: 15px;
+  }
+  button {
+    width: 100%;
+  }
+  p {
+    font-size: 10px;
+  }
+  }
