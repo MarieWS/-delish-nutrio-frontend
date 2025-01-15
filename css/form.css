@@ -397,3 +397,13 @@ input[type="radio"], input[type="number"], input[type="date"], select {
 .sign-up-button:hover {
     opacity: 1; /* Fully opaque on hover */
 }
+
+/* Responsive font size */
+h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+/* Responsive width */
+.container {
+    width: clamp(300px, 50%, 800px);
+}
