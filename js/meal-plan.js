@@ -24,3 +24,5 @@ document.getElementById('upload').addEventListener('change', function (event) {
     const file = event.target.files[0];
     readExcelFile(file);
 });
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
