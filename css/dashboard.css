@@ -181,6 +181,11 @@ input, select {
     margin: 0 auto;
 }
 
+#other-gender {
+    display: none;
+    margin-top: 10px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
     .Container {
