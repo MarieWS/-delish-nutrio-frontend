@@ -55,20 +55,33 @@
         </ul>
     </nav>
     <main class="main-content">
-       <div class="grid-container">
-            <div>
-                <h2>Your Current Health <br>Status</h2>
-                <div class="Holder"><img src="./Images/Car Information.jpg" alt="" width="100%"></div>
-                <h3 class="Wap">Weekly Activity Progress</h3>
-                <div class="Holder"><img src="./Images/Group 240.jpg" alt="" width="100%"></div>
+    <div class="grid-container">
+        <div>
+            <h2>Your Current Health Status</h2>
+            <div class="Holder">
+                <img src="./Images/Car Information.jpg" alt="" width="100%">
             </div>
-            <div>
-                <img src="./Images/Frame 427319296.jpg" alt="">
+            <h3 class="Wap">Weekly Activity Progress</h3>
+            <div class="Holder">
+                <img src="./Images/Group 240.jpg" alt="" width="100%">
             </div>
-            <div>
-
+            <!-- Add progress bars -->
+            <div class="progress-bar">
+                <label for="progress1">Exercise:</label>
+                <progress id="progress1" value="70" max="100"></progress>
             </div>
-       </div>
-    </main>
+            <div class="progress-bar">
+                <label for="progress2">Diet:</label>
+                <progress id="progress2" value="50" max="100"></progress>
+            </div>
+        </div>
+        <div>
+            <img src="./Images/Frame 427319296.jpg" alt="">
+        </div>
+        <div>
+            <!-- Additional tracking elements can be added here -->
+        </div>
+    </div>
+</main>
 </body>
 </html>
