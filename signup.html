@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <form id="register-form" action="action_page.php" style="border:1px solid #ccc">
+    <form id="signupForm">
         <div class="container">
-        <h2>Signup Form</h2>
-        <form id="signupForm">
+            <h2>Signup Form</h2>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -36,14 +35,13 @@
             </div>
             <div class="form-group">
                 <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword"
-                    name="confirmPassword" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
                 <span id="confirmPasswordError" class="error"></span>
             </div>
             <button type="submit">Signup</button>
-        </form>
-        <p id="message"></p>
-    </div>
+        </div>
+    </form>
+    <p id="message"></p>
     <script>
         document.getElementById('signupForm').addEventListener('submit', function (event) {
             event.preventDefault();
@@ -71,48 +69,15 @@
                 confirmPasswordError.textContent = '';
             }
 
-            // Here you can add code to send the form data to the server
-
             message.style.color = 'green';
             message.textContent = 'Signup successful!';
-        });
-
-        document.getElementById('password').addEventListener('focus', function () {
-            document.getElementById('passwordHint').style.display = 'block';
-        });
-
-        document.getElementById('password').addEventListener('blur', function () {
-            document.getElementById('passwordHint').style.display = 'none';
-        });
-
-        document.getElementById('password').addEventListener('input', function () {
-            let password = this.value;
-            let passwordStrength = document.getElementById('passwordStrength');
-            let strength = getPasswordStrength(password);
-
-            passwordStrength.innerHTML = ''; // Clear previous strength bars
-            if (strength) {
-                let strengthBar = document.createElement('div');
-                strengthBar.className = strength;
-                passwordStrength.appendChild(strengthBar);
-            }
+            window.location.href = 'register.html';  // Redirect to register page
         });
 
         function validatePassword(password) {
             let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
             return regex.test(password);
         }
-
-        function getPasswordStrength(password) {
-            if (password.length < 8) {
-                return 'weak';
-            }
-            if (password.match(/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])/)) {
-                return 'strong';
-            }
-            return 'medium';
-        }
-    <script src="js/register.js">
-    </script>   
+    </script>
 </body>
 </html>
