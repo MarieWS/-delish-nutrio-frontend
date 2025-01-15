@@ -74,8 +74,11 @@
                         <input id="inputs" type="date" required>
                     </div>
                     <div class="form-group">
-                        <label>What is your age?</label>
-                        <input id="inputs" type="number" min="0" max="120" placeholder="Enter your age" required>
+                        <div class="form-group">
+                            <label>What is your birth date?</label>
+                            <input id="year" type="number" min="1900" max="2100" placeholder="Year" required>
+                            <input id="month" type="number" min="1" max="12" placeholder="Month" required>
+                            <input id="day" type="number" min="1" max="31" placeholder="Day" required>
                     </div>
                     <div class="form-group">
                         <label>Where are you from?</label>
@@ -180,7 +183,29 @@
             } else {
                 dropdownContent.style.display = 'block';
             }
-        });
-    </script>
+        }); document.getElementById('year').addEventListener('input', function() {
+        const year = parseInt(this.value);
+        if (year < 1900 || year > 2100) {
+            alert('Please enter a valid year between 1900 and 2100.');
+            this.value = '';
+        }
+    });
+
+    document.getElementById('month').addEventListener('input', function() {
+        const month = parseInt(this.value);
+        if (month < 1 || month > 12) {
+            alert('Please enter a valid month between 1 and 12.');
+            this.value = '';
+        }
+    });
+
+    document.getElementById('day').addEventListener('input', function() {
+        const day = parseInt(this.value);
+        if (day < 1 || day > 31) {
+            alert('Please enter a valid day between 1 and 31.');
+            this.value = '';
+        }
+    });
+</script>
 </body>
 </html>
