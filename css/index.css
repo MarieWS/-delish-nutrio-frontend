@@ -154,10 +154,20 @@ footer {
     color: red;
 }
 
+/* Social Icons Styles */
 .socials li {
     display: inline;
     margin-right: 15px;
     font-size: 22px;
+}
+
+.socials a {
+    color: #0A142F;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: red;
 }
 
 .footer-links li:first-child {
