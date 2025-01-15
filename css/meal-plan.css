@@ -387,3 +387,19 @@ aside ul li img {
         margin-left: 0;
     }
 }
+
+.file-name {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Responsive font size */
+h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+/* Responsive width */
+.container {
+    width: clamp(300px, 50%, 800px);
+}
