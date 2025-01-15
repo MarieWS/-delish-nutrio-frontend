@@ -1,3 +1,14 @@
+// Existing script for navigation links
+const navLinks = document.querySelectorAll('nav ul li a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.forEach(link => link.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
+// Script to handle file upload and display Excel data
 function readExcelFile(file) {
     const reader = new FileReader();
     reader.onload = function (event) {
@@ -24,5 +35,3 @@ document.getElementById('upload').addEventListener('change', function (event) {
     const file = event.target.files[0];
     readExcelFile(file);
 });
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
