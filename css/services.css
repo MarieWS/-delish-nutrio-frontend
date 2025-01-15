@@ -38,3 +38,13 @@ main {
 .service-item p {
     margin-bottom: 0;
 }
+
+/* Responsive font size */
+h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+/* Responsive width */
+.container {
+    width: clamp(300px, 50%, 800px);
+}
