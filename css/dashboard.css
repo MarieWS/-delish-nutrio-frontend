@@ -186,6 +186,12 @@ input, select {
     margin-top: 10px;
 }
 
+.form-group input {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
     .Container {
