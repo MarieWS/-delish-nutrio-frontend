@@ -42,12 +42,29 @@ input[type=submit]:hover {
     margin-bottom: 40px;
 }
 
+/* Existing styles */
 .contact-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 200px;
 }
 
+/* Update grid settings for the contact form and picture */
+.contact-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px; /* Adjusted gap to ensure enough space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-wrap {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        gap: 20px;
+    }
+}
+
+/* Continue with other styles */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -55,34 +72,9 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.contact-form input, .contact-form textarea {
-    padding: 20px 10px;
-    border-radius: 7px;
-    border: 1px solid red;
-}
-
-.contact-form textarea {
-    padding-bottom: 80px;
-}
-
-.form-btn {
-    border: 1px solid red;
-    align-items: center;
-    text-align: center;
-}
-
-.contact-form button {
-    display: block;
-    background-color: red;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 7px;
-    border: none;
-}
+/* Other existing styles */
 
 /* Media queries for responsiveness */
-
-/* Styles for small screens */
 @media (max-width: 600px) {
     .contact-wrap {
         grid-template-columns: 1fr;
@@ -117,6 +109,14 @@ input[type=submit]:hover {
         text-align: center;
     }
 }
+
+/* Footer Links Styles */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Other existing styles */
 
 /* Footer Links Styles */
 .footer-links ul {
