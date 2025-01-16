@@ -1,16 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/4c58d39949.js" crossorigin="anonymous"></script>
     <script src="js/register.js" defer></script>
 </head>
-
 <body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#" class="active"></a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <!-- Removed unnecessary links -->
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/home/logo.svg" alt="logo"></a>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-buttons">
+                <button id="dash" onclick="window.location.href='dashboard.html'">MY DASHBOARD</button>
+                <button id="login" onclick="window.location.href='login.html'">LOGIN/REGISTER</button>
+            </div>
+        </nav>
+    </header>
+
     <div class="Logo-container">
         <img src="images/Delish Nutrio 1 logo.png" alt="Logo">
     </div>
@@ -57,19 +90,9 @@
                     <input type="password" id="confirmPassword" name="confirmPassword">
                 </div>
                 <button id="sign-up-btn" type="submit"> Sign Up</button>
-
-                <!-- <button type="submit">SignUp</button> -->
-                <!-- <script>
-                    document.querySelector('sign-up-btn').addEventListener('click', function () {
-                        window.location.href='accountctreatinsuccess.html';
-                    });
-                </script> -->
             </form>
-            <p>By clicking "SignUp", you agree that you have read the <a href="#">Privacy Policy</a> and have
-                reviewed and agree to <a href="#">Terms and conditions.</a></p>
+            <p>By clicking "SignUp", you agree that you have read the <a href="#">Privacy Policy</a> and have reviewed and agree to <a href="#">Terms and conditions.</a></p>
         </div>
     </div>
-
 </body>
-
 </html>
