@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="css main.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
     <link rel="icon" type="image/x-icon" href="assets/home/logo.svg">
     
     <style>
@@ -70,9 +69,24 @@
     </style>
 </head>
 <body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#" class="active"></a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <!-- Removed unnecessary links -->
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
     <header>
         <nav>
-            <div class="logo"><a href="index.html"> <img src="assets/home/logo.svg" alt="logo"></a> </div>
+            <div class="logo">
+                <a href="index.html"><img src="assets/home/logo.svg" alt="logo"></a>
+            </div>
             <div class="links">
                 <ul>
                     <li><a href="about.html">About Us</a></li>
@@ -91,7 +105,7 @@
     <section class="hero">
         <div class="hero-info">
             <h1>Empower Healthy Living</h1>
-            <p>We are a community-driven organization passionate about helping people achieve their health and wellness goals. Our comprehensive approach combines cutting-edge nutrition science, [...]
+            <p>We are a community-driven organization passionate about helping people achieve their health and wellness goals. Our comprehensive approach combines cutting-edge nutrition science, personalized solutions, and a supportive community to empower individuals to take charge of their health.</p>
         </div>
     </section>
 
@@ -99,11 +113,11 @@
         <div class="mv-wrap">
             <div class="mv">
                 <h2>Our Mission</h2>
-                <p>Empowering individuals to take control of their health and wellness through personalized nutrition solutions, expert guidance, and a supportive community. We deliver tailored p[...]
+                <p>Empowering individuals to take control of their health and wellness through personalized nutrition solutions, expert guidance, and a supportive community. We deliver tailored plans that fit each person's unique needs and goals.</p>
             </div>
             <div class="mv">
                 <h2>Our Vision</h2>
-                <p>A world where everyone has access to personalized nutrition solutions, empowering them to achieve optimal health, happiness, and well-being. We envision a future where nutritio[...]
+                <p>A world where everyone has access to personalized nutrition solutions, empowering them to achieve optimal health, happiness, and well-being. We envision a future where nutrition and wellness are integral parts of everyone's daily life.</p>
             </div>
         </div>
     </section>
@@ -139,7 +153,7 @@
 
         <div class="story">
             <h2>Our Story</h2>
-            <p>At Delish Nutrio, we believe that everyone deserves to live a healthy, happy life. Our journey began with a simple yet powerful idea: to make personalized nutrition accessible to a[...]
+            <p>At Delish Nutrio, we believe that everyone deserves to live a healthy, happy life. Our journey began with a simple yet powerful idea: to make personalized nutrition accessible to all. Through our innovative approach, we aim to revolutionize the way people think about food, health, and wellness.</p>
         </div>
 
         <div class="values">
@@ -150,10 +164,9 @@
                     <li>Healthy food choices <br> We have developed educational materials to help you make healthy food choices.</li>
                     <li>Empathy <br> We put people first, understanding their unique needs and goals. </li>
                     <li>Flexibility <br> Available for any location. </li>
-                    <li>Nurturing and Caring<br> We provide 'Nurture' and 'Care' in all we do, everyday, eveytime. </li>
+                    <li>Nurturing and Caring<br> We provide 'Nurture' and 'Care' in all we do, every day, every time. </li>
                 </ul>
             </p>
-            
         </div>
     </section>
 
@@ -190,13 +203,14 @@
 
             <div class="footer-links">
                 <ul>
-                    <li><a href="contact">Contact Us</a></li>
-                    <li><a href="office">Office: <span style="font-weight: bold;">123-456-7890</span></a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="office.html">Office: <span style="font-weight: bold;">123-456-7890</span></a></li>
+                </ul>
             </div> 
             
             <div class="footer-links">
                 <ul>
-                    <li><a href="social">Social</a></li>
+                    <li><a href="social.html">Social</a></li>
                     <div class="socials">
                         <li> <a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a> </li>
                         <li> <a href="https://www.instagram.com"><i class="fa-brands fa-square-instagram"></i></a> </li>
@@ -212,4 +226,4 @@
         <p class="copy"> &copy; 2024 Delish Nutrio | All Rights Reserved </p>
     </footer>
 </body>
-</html>
+                            </html>
