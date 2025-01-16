@@ -8,16 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
 </head>
 <body>
-    <!-- Top Navigation Menu -->
-    <div class="topnav">
-        <a href="#" class="active"></a>
-        <!-- Navigation links (hidden by default) -->
-        <div id="myLinks"></div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html"> <img src="assets/home/logo.svg" alt="logo"></a> </div>
+            <div class="links">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-buttons">
+                <button id="dash" onclick="window.location.href='dashboard.html'">MY DASHBOARD</button>
+                <button id="login-register" onclick="window.location.href='login.html'">LOGIN/REGISTER</button>
+            </div>
+        </nav>
+    </header>
 
     <div class="container">
         <div class="heading">
