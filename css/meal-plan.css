@@ -1,3 +1,4 @@
+
 * {  
     margin: 0;
     padding: 0;
@@ -135,6 +136,8 @@ main hr {
     margin-right: 1em;
 }
 
+
+
 .meal-info .nutrition {
     display: flex;
     justify-content: space-between;
@@ -186,9 +189,13 @@ main hr {
     display: flex;
     justify-content: space-between;
     width: 80px;
+    
+
+
 }
 
 .nutrientsss {
+    
     align-items: center;
     text-align: center;
     background-color: black;
@@ -199,10 +206,12 @@ main hr {
 }
 
 .nutrientsss img {
+    
     width: 30px;
     height: 30px;
     margin-right: 5px;
 }
+
 
 .nutrientsss span {
     color: white;
@@ -213,7 +222,11 @@ main hr {
     border-radius: 5px;
 }
 
+
+
 .nutrientssss {
+    
+    
     padding: 5px 10px;
     align-items: center;
     text-align: center;
@@ -236,6 +249,7 @@ main hr {
 }
 
 .meal-info button {
+    
     color: #333b69;
     border: none;
     padding: 0.5em 1em;
@@ -299,99 +313,6 @@ aside ul li img {
     width: 25px;
     height: 25px;
     
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .Header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1em;
-        height: auto;
-    }
-
-    .search-bar {
-        width: 100%;
-        margin: 1em 0;
-    }
-
-    .search-bar input {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .right-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .right-header a {
-        margin: 1em 0;
-    }
-
-    nav {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
-
-    nav ul li {
-        padding: 0.5em;
-    }
-
-    main {
-        padding: 1em;
-    }
-
-    main hr {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .meal-section {
-        flex-direction: column;
-    }
-
-    .meal-section img {
-        width: 100%;
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 1em;
-    }
-
-    .meal-info .nutrition {
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    .meal-info .carbs-protein {
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    aside {
-        width: 100%;
-        float: none;
-        margin-top: 2em;
-    }
-
-    aside hr {
-        width: 100%;
-        margin-left: 0;
-    }
-}
-
-.file-name {
-    font-size: 14px;
-    color: #333;
-    margin-top: 10px;
 }
 
 /* Responsive font size */
