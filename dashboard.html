@@ -10,22 +10,37 @@
     <script src="https://kit.fontawesome.com/4c58d39949.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="Header">
-        <div class="Logo">
-            <img src="images/logo.png" alt="Logo">
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="#" class="active"></a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <!-- Removed unnecessary links -->
         </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
-        <h1>Meal Plan</h1>
-
-        <div class="search-bar">
-            <input type="text" placeholder="Search for something">
-        </div>
-
-        <div class="right-header">
-            <a href="https://delish-nutrio-frontend.vercel.app/">MAIN WEBSITE</a>
-            <img src="images/bell-icon.png" alt="Notification Badge" class="bell-image">
-            <img src="images/user-image.png" alt="Profile Picture" class="user-image">
-        </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="assets/home/logo.svg" alt="logo"></a>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-buttons">
+                <button id="dash" onclick="window.location.href='dashboard.html'">MY DASHBOARD</button>
+                <button id="login" onclick="window.location.href='login.html'">LOGIN/REGISTER</button>
+            </div>
+        </nav>
     </header>
 
     <main class="main-content">
@@ -157,4 +172,4 @@
         });
     </script>
 </body>
-    </html>
+                    </html>
