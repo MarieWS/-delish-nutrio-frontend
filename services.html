@@ -3,87 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <link rel="stylesheet" href="css/services.css">
+    <title>Our Services</title>
+    <style>
+        /* Your CSS code here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .service-item {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .service-item img {
+            max-width: 100px;
+            margin-bottom: 15px;
+        }
+
+        .service-item:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Our Services</h1>
     </header>
     <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Unlock Your Health Potential</h2>
-                <p>Discover personalized nutrition plans, expert guidance, and delicious recipes to help you achieve your wellness goals.</p>
-                <a href="#" class="btn">Get Started</a> 
-            </div>
+        <section class="services-container">
+            <div id="services-list"></div> 
         </section>
-
-        <section class="service-section">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <img src="images/service1.png" alt="Meal Planning"> 
-                    <h3>Personalized Meal Plans</h3>
-                    <p>Tailored to your dietary needs, preferences, and goals.</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <img src="images/service2.png" alt="Recipe Book"> 
-                    <h3>Delicious & Easy Recipes</h3>
-                    <p>Quick and simple recipes for busy lifestyles.</p>
-                    <a href="#" class="btn">Explore Recipes</a>
-                </div>
-                <div class="service-card">
-                    <img src="images/service3.png" alt="Nutritionist"> 
-                    <h3>Nutritional Guidance</h3>
-                    <p>Expert advice from our registered dietitians.</p>
-                    <a href="#" class="btn">Consult a Dietitian</a>
-                </div>
-                <div class="service-card">
-                    <img src="images/service4.png" alt="Local Produce"> 
-                    <h3>Access to Healthy Foods</h3>
-                    <p>Partnered with local farms and markets.</p>
-                    <a href="#" class="btn">Find Local Sources</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="pn-section">
-            <h2>Personalized Nutrition (PN)</h2>
-            <p>Experience a personalized approach to nutrition.</p>
-            <ul>
-                <li>Tailored diet and supplement plans</li>
-                <li>Personalized nutritional products</li>
-                <li>Expert guidance and support</li>
-            </ul>
-            <a href="#" class="btn">Learn More About PN</a>
-        </section>
-
-        <section class="benefits-section">
-            <h2>Benefits of Our Services</h2>
-            <ul>
-                <li>Improved overall health</li>
-                <li>Weight management</li>
-                <li>Increased energy levels</li>
-                <li>Reduced risk of chronic diseases</li>
-                <li>Improved sleep quality</li> 
-                <li>Enhanced mood and mental well-being</li>
-            </ul>
-        </section>
-
-        <section class="testimonials">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-card">
-                <p>"Delish Nutrio has completely transformed my relationship with food. Their personalized plans and expert guidance have made healthy eating enjoyable and sustainable."</p>
-                <p>- John Doe</p>
-            </div>
-        </section>
-
     </main>
 
-    <footer>
-        <p>&copy; 2024 Delish Nutrio. All Rights Reserved.</p>
-    </footer>
+    <script src="services.js"></script> 
 </body>
 </html>
