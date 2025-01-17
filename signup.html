@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="css/signup.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <form id="signupForm">
-        <div class="container">
-            <h2>Signup Form</h2>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-                <div class="password-hint" id="passwordHint">
-                    Password must be at least 8 characters long, and include at
-                    least one uppercase letter, one lowercase letter, one
-                    number, and one special character.
-                </div>
-                <span id="passwordError" class="error"></span>
-                <div class="password-strength" id="passwordStrength"></div>
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-                <span id="confirmPasswordError" class="error"></span>
-            </div>
-            <button type="submit">Signup</button>
-        </div>
-    </form>
-    <p id="message"></p>
+  <head>
+    <title>Sign Up / Registration Form </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+          <h1>Register</h1>
+          <form method="POST" action="">
+              <div class="txt_field">
+                  <input type="text" name="name" required>
+                  <span></span>
+                  <label>Name</label>
+              </div>
+              <div class="txt_field">
+                  <input type="email" name="email" required>
+                  <span></span>
+                  <label>Email</label>
+              </div>
+              <div class="txt_field">
+                  <input type="password" name="password" required>
+                  <span></span>
+                  <label>Password</label>
+              </div>
+              <div class="txt_field">
+                  <input type="password" name="cpassword" required>
+                  <span></span>
+                  <label>Confirm Password</label>
+              </div>
+              <input name="submit" type="Submit" value="Sign Up">
+              <div class="signup_link">
+                  Have an Account ? <a href="#">Login Here</a>
+              </div>
+          </form>
+      </div>
+  </div>
+  </body>
+</html>
     <script>
         document.getElementById('signupForm').addEventListener('submit', function (event) {
             event.preventDefault();
