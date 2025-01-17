@@ -1,42 +1,36 @@
-import { backendServer } from "./global_variables.js";
+import { backendServer } from "./global_variables.js"; 
 
-const loginForm = document.querySelector('#login-form');
-const loginResponse = document.querySelector('.login-response');
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form');
+    const loginResponse = document.querySelector('.login-response');
 
-loginForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    loginResponse.textContent = '';
+    loginForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        loginResponse.textContent = ''; 
 
-    const formData = new FormData(loginForm);
-    const formDataObject = Object.fromEntries(formData);
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
 
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formDataObject),
-        credentials: 'include',
-    }
-
-    const login = async () => {
         try {
-            const response = await fetch(`${backendServer}/api/login`, options);
-            
-            if (response.ok) {
-                loginResponse.classList.toggle('hidden');
-                loginResponse.classList.add('login-success');
-                loginResponse.textContent = 'Login Successful'
-                window.location.href = './dashboard.html';
-            } else {
-                const data = await response.json();
-                loginResponse.classList.toggle('hidden');
-                loginResponse.classList.add('login-error');
-                loginResponse.textContent = data.message;
+            const response = await fetch(`${backendServer}/api/login`, { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Login failed. Please check your credentials.'); 
             }
+
+            // Handle successful login (e.g., redirect to dashboard)
+            window.location.href = '/dashboard'; 
+
         } catch (error) {
-            loginResponse.textContent = 'An Error Occurred';
+            loginResponse.classList.add('error'); 
+            loginResponse.textContent = error.message; 
         }
-    }
-    login()
-})
+    });
+});
