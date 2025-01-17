@@ -1,10 +1,3 @@
-const loginRegisterButton = document.querySelector("#login-register");
-
-loginRegisterButton.addEventListener("click", () => {
-  const formContainer = document.querySelector(".form_container");
-  formContainer.classList.toggle("active");
-});
-
 const registerForm = document.getElementById('register-form');
 
 registerForm.addEventListener('submit', async (event) => {
@@ -14,25 +7,23 @@ registerForm.addEventListener('submit', async (event) => {
   const data = Object.fromEntries(formData);
 
   try {
-    const response = await fetch('https://techcrush-backend.netlify.app/.netlify/functions/register', { // Updated URL
+    const response = await fetch('https://techcrush-backend.netlify.app/.netlify/functions/register', { 
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     });
 
     if (!response.ok) {
-      const errorData = await response.json();
-      console.error('Registration failed:', errorData.message || response.status);
-      alert('Registration failed. ' + (errorData.message || 'Please try again.'));
+      const errorData = await response.json(); 
+      console.error('Registration failed:', errorData.message || response.status); 
+      alert(`Registration failed. ${errorData.message || 'Please try again.'}`); 
     } else {
       console.log('Registration successful!');
-      alert('Registration successful! Please check your email for verification.');
-      // You might want to redirect to a success page instead of 
-      // directly to verifyEmail.html, as the verification link 
-      // will be sent to the user's email.
-      // window.location.href = 'success.html'; 
+      alert('Registration successful! Please check your email for verification.'); 
+      // Redirect to success page after successful registration
+      window.location.href = 'success.html'; 
     }
   } catch (error) {
     console.error('Error during registration:', error);
