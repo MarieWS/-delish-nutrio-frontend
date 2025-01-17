@@ -9,19 +9,38 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <style>
         body {
             font-family: lato;
             text-align: center;
+            display: flex; /* Center content vertically */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
         }
 
         .message-sent {
-            margin-top: 50px;
+            text-align: center;
+            background-color: #f0f0f0; 
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
         }
 
         h1 {
-            color:black;
+            color: #333; 
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .fa-check-circle {
+            font-size: 50px;
+            color: #4CAF50; /* Green color */
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -45,8 +64,10 @@
     </header>
 
     <section class="message-sent">
+        <i class="fa fa-check-circle"></i> 
         <h1>Message Sent Successfully!</h1>
-        <p>Your message has been sent successfully. <a href="contact.html#get-in-touch">Get in Touch With Us</a></p>
+        <p>Your message has been sent successfully. We will review your inquiry and respond shortly.</p>
+        <a href="contact.html#get-in-touch">Return to Contact Page</a>
     </section>
 </body>
 </html>
