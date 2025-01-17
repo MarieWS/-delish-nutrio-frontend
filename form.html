@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/register.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/4c58d39949.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Top Navigation Menu -->
     <div class="topnav">
         <a href="#" class="active"></a>
-        <!-- Navigation links (hidden by default) -->
         <div id="myLinks">
-            <!-- Removed unnecessary links -->
-        </div>
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+            </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
@@ -44,204 +39,46 @@
         </nav>
     </header>
 
-    <!-- Your existing HTML code -->
-    <section class="container">
-        <div class="inner-container">
-            <div class="logo-container">
-                <img class="logo" src="delish nutrio logo.jpg" alt="logo" width="100px" height="100px">
-                <h2 class="logo-text">Complete this form in order to fully <br> <span class="logo-setup">Set up</span> your account</h2>
+    <div class="Logo-container">
+        <img src="images/Delish Nutrio 1 logo.png" alt="Logo">
+    </div>
+
+    <div class="container">
+        <div class="left-section">
+            <h2>Unlock Your Nutrition Potential,<br>Sign up to get started.</h2>
+            <div class="Image-layout">
+                <img src="images/registerform2.png" alt="Sign up">
             </div>
-            <div>
-            <form action="/action_page.php">
-  <label for="username">Username: </label>
-  <input type="text" id="username" name="username"><br>
-  <input type="submit" value="Submit">
-            </form>
-            </div>
-            <div class="form-section">
-                <div class="inner-form-section">
-                    <form id="setup-form">
-                        <div class="right-column">
-                            <h2 class="form-section-header gender">what is your gender?</h2>
-                            <div class="gender-container">
-                                <input class="gender-input" type="radio" id="Male" name="gender" value="Male">
-                                <label for="Male">Male</label>
-                                <input type="radio" id="Female" name="gender" value="Female">
-                                <label for="Female">Female</label>
-                            </div>
-                            <h2 class="form-section-header">where are you from?</h2>
-                            <div class="location-container">
-                                <select class="location" id="country" name="country">
-                                    <!-- Options here -->
-                                </select>
-                            </div>
-                            <h2 class="form-section-header">Dietary preference</h2>
-                            <div class="Dietary-container">
-                                <select class="Dietary-preference" name="dietary_preferences" id="Dietary-preference">
-                                    <!-- Options here -->
-                                </select>
-                            </div>
-                            <h2 class="form-section-header">Activity level</h2>
-                            <div class="Activity-container">
-                                <select class="Activity" name="activity_levels" id="Activity-level">
-                                    <!-- Options here -->
-                                </select>
-                            </div>
-                            <h2 class="form-section-header">Medical Condition</h2>
-                            <div class="Medical-container">
-                                <select class="Medical" name="medical_condition" id="Medical-Condition">
-                                    <!-- Options here -->
-                                </select>
-                            </div>
-                            <h2 class="form-section-header">Weight</h2>
-                            <div class="weight-container">
-                                <input class="weight" type="number" id="Weight" name="weight" min="0" max="300">
-                                <span id="Weight"></span>
-                            </div>
-                        </div>
-                        <div class="left-column">
-                            <h2 class="form-section-header">when were you born?</h2>
-                            <div class="dob-container">
-                                <input class="dob" type="date" id="birthdate" name="age" placeholder="mm/dd/yyyy">
-                            </div>
-                            <h2 class="form-section-header">What region are you from?</h2>
-                            <div class="region-container">
-                                <select class="region" name="region" id="region">
-                                    <!-- Options here -->
-                                </select>
-                            </div>
-                            <h2 class="form-section-header">Health Goal</h2>
-                            <div class="health-container">
-                                <select class="health" name="health_goals" id="Health-goal">
-                                    <!-- Options here -->
-                                </select>
-                            </div>
-                            <h2 class="form-section-header">Allergies</h2>
-                            <div class="allergies-container">
-                                <select class="allergies" name="allergies" id="Allergies">
-                                    <!-- Options here -->
-                                </select>
-                            </div>
-                            <h2 class="form-section-header">Height</h2>
-                            <div class="height-container">
-                                <input class="height" type="number" id="height" name="height" min="0" max="250">
-                                <span id="height-display"></span>
-                            </div>
-                        </div>
-                        <div class="btn-container">
-                            <button type="submit" class="btn">Proceed</button>
-                        </div>
-                    </form>
-                    <button class="sign-up-button" onclick="signUpWithEmail()">Sign Up with Email</button>
-                    <button class="sign-up-button" onclick="signUpWithName()">Sign Up with Name</button>
-                </div>
-            </div>
-            <p class="information">We use this information to calculate <br> an accurate calorie goal for you</p>
         </div>
-    </section>
+        <div class="right-section">
+            <div class="black-arrow">
+                <img src="images/blackarrow.png" alt="Black Arrow">
+            </div>
+            <h3>Welcome</h3>
+            <form id="register-form"> 
+                <div class="Form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div class="Form-group">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required>
+                </div>
+                <div class="Form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="Form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Register</button> 
+            </form>
+            <p>By clicking "SignUp", you agree that you have read the <a href="#">Privacy Policy</a> and have reviewed and agree to <a href="#">Terms and conditions.</a></p>
+        </div>
+    </div>
 
-    <script>
-        document.getElementById('setup-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
-            
-            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/profile', {
-                method: 'GET',
-                headers: {
-                    'accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Profile data:', data);
-                // Handle the profile data as needed
-            })
-            .catch(error => console.error('Error:', error));
-        });
+    <script src="register.js"></script> 
 
-        function signUpWithEmail() {
-            const email = prompt("Enter your email:");
-            if (email) {
-                const data = { email: email };
-                signUp(data);
-            }
-        }
-
-        function signUpWithName() {
-            const name = prompt("Enter your name:");
-            if (name) {
-                const data = { name: name };
-                signUp(data);
-            }
-        }
-
-        function signUp(data) {
-            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            }).then(response => response.json())
-              .then(result => {
-                  if(result.success) {
-                      // Handle success
-                  } else {
-                      // Handle failure
-                  }
-              }).catch(error => console.error('Error:', error));
-        }
-
-        function logIn(data) {
-            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            }).then(response => response.json())
-              .then(result => {
-                  if(result.success) {
-                      // Handle success
-                  } else {
-                      // Handle failure
-                  }
-              }).catch(error => console.error('Error:', error));
-        }
-
-        function updateProfile(data) {
-            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/updateprofile', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            }).then(response => response.json())
-              .then(result => {
-                  if(result.success) {
-                      // Handle success
-                  } else {
-                      // Handle failure
-                  }
-              }).catch(error => console.error('Error:', error));
-        }
-
-        function generateMeal() {
-            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/generatemeal', {
-                method: 'GET',
-                headers: {
-                    'accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Meal data:', data);
-                // Handle the meal data as needed
-            })
-            .catch(error => console.error('Error:', error));
-        }
-    </script>
 </body>
-                                </html>
+</html>
