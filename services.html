@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
     <style>
-        /* Your CSS code here */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .services-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         .service-item {
@@ -28,13 +31,14 @@
             padding: 20px;
             margin: 20px;
             text-align: center;
+            width: 300px; /* Adjust as needed */
         }
 
-        .service-item img {
-            max-width: 100px;
-            margin-bottom: 15px;
+        .service-item h2 {
+            margin-bottom: 10px;
         }
 
+        /* Optional hover effect */
         .service-item:hover {
             background-color: #e0e0e0;
             transform: translateY(-5px);
@@ -48,10 +52,45 @@
     </header>
     <main>
         <section class="services-container">
-            <div id="services-list"></div> 
+            <div class="service-item">
+                <h2>Tailored Meal Plans</h2>
+                <p>Customized meal plans based on individual needs and preferences.</p>
+            </div>
+            <div class="service-item">
+                <h2>Easy-to-Follow Recipes</h2>
+                <p>Simple and quick recipes that require minimal effort.</p>
+            </div>
+            <div class="service-item">
+                <h2>Nutritional Guidance</h2>
+                <p>Expert advice on healthy eating habits and nutrient-dense foods.</p>
+            </div>
+            <div class="service-item">
+                <h2>Access to Healthy Food</h2>
+                <p>Partnerships with local farmers and grocery stores to facilitate access to fresh produce.</p>
+            </div>
+            <div class="service-item">
+                <h2>Personalized Nutrition (PN)</h2>
+                <p>Tailored dietary advice, products, and services based on an individual's unique characteristics. PN can help people prevent, manage, and treat diseases, and improve their overall health.</p>
+            </div>
+            <div class="service-item">
+                <h3>Services provided by PN</h3>
+                <ul>
+                    <li>Tailored diet and supplement plans</li>
+                    <li>Personalized nutritional products</li>
+                    <li>Personalized nutritional guidance</li>
+                    <li>Personalized nutritional interventions</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Benefits of PN</h3>
+                <ul>
+                    <li>Achieve lasting dietary behavior changes</li>
+                    <li>Reach desired health goals</li>
+                    <li>Make more effective dietary changes</li>
+                    <li>Support for specific health needs</li>
+                </ul>
+            </div>
         </section>
     </main>
-
-    <script src="services.js"></script> 
 </body>
 </html>
