@@ -1,32 +1,41 @@
-const registerForm = document.getElementById('register-form');
-
-registerForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(registerForm);
-  const data = Object.fromEntries(formData);
-
-  try {
-    const response = await fetch('https://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/register', { 
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+document.addEventListener('DOMContentLoaded', () => {
+    const registerForm = document.getElementById('register-form');
+    
+    registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const firstName = registerForm.elements['firstname'].value;
+        const lastName = registerForm.elements['lastname'].value;
+        const username = registerForm.elements['username'].value;
+        const phoneNumber = registerForm.elements['phone_number'].value;
+        const email = registerForm.elements['email'].value;
+        const password = registerForm.elements['password'].value;
+        const confirmPassword = registerForm.elements['confirmPassword'].value;
+        
+        if (password !== confirmPassword) {
+            alert('Passwords do not match.');
+            return;
+        }
+        
+        fetch('https://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/register/api/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({ firstName, lastName, username, phoneNumber, email, password })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = 'accountcreationsuccess.html';
+            } else {
+                alert('Registration failed. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            alert('An error occurred. Please try again.');
+        });
     });
-
-    if (!response.ok) {
-      const errorData = await response.json(); 
-      console.error('Registration failed:', errorData.message || response.status); 
-      alert(`Registration failed. ${errorData.message || 'Please try again.'}`); 
-    } else {
-      console.log('Registration successful!');
-      alert('Registration successful! Please check your email for verification.'); 
-      // Redirect to success page after successful registration
-      window.location.href = 'success.html'; 
-    }
-  } catch (error) {
-    console.error('Error during registration:', error);
-    alert('An error occurred during registration. Please try again.');
-  }
 });
