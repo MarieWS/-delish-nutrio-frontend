@@ -14,7 +14,7 @@
         </div>
         <h1>Meal Plan</h1>
         <div class="search-bar">
-            <input type="text" placeholder="Search for something">
+            <input type="text" id="searchInput" placeholder="Search for something">
         </div>
         <div class="right-header">
             <a href="#"></a>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+            </section> 
 
         <aside>
             <h3>My Shopping List</h3>
@@ -79,13 +79,30 @@
             </ul>
         </aside>
 
-        <!-- File Input for Uploading Excel file -->
         <input type="file" id="upload" accept=".xlsx, .xls" />
-        <!-- Container to Display Excel Data -->
         <div id="excel-data"></div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
     <script src="meal-plan.js"></script>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+
+        searchInput.addEventListener('keyup', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+            const mealSections = document.querySelectorAll('.meal-section');
+
+            mealSections.forEach((section) => {
+                const mealTitle = section.querySelector('.meal-info h3').textContent.toLowerCase();
+                if (mealTitle.includes(searchTerm)) {
+                    section.style.display = 'block'; 
+                } else {
+                    section.style.display = 'none'; 
+                }
+            });
+        });
+    </script>
+
 </body>
-</html>
+                </html>
