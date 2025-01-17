@@ -75,32 +75,38 @@
 
     <script>
         const loginform = document.getElementById('login-form');
-        loginform.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = loginform.elements['emal'].value;
-            const password = loginform.elements['password'].value;
+loginform.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = loginform.elements['email'].value; 
+    const password = loginform.elements['password'].value;
 
-            fetch('/api/login', {
-                method: 'POST',
-                headers: {
-                    'content-Type': 'application/json'
-                },
-                body:
-                    JSON.stringify({
-                        email, password
-                    })
-            })
+    try {
+        const response = await fetch('https://techcrush-backend-85eulpiau-maries-projects-0395c141.vercel.app/api/login', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+        });
 
-                .then((Response) => 
-                Response.json())
-                .then((data) =>
-                    console.log(data))
-                .catch((error) =>
-                    console.error(error));
+        if (!response.ok) {
+            throw new Error('Login failed. Please check your credentials.'); 
+        }
 
+        const data = await response.json();
+        console.log(data); // Handle successful login (e.g., redirect to dashboard)
 
-        })
-
+    } catch (error) {
+        console.error('Login error:', error);
+        // Display an error message to the user 
+        const errorMessage = document.getElementById('login-error'); 
+        if (errorMessage) {
+            errorMessage.textContent = error.message; 
+        } else {
+            console.error('Error displaying error message.'); 
+        }
+    }
+});
     </script>
 </body>
 
