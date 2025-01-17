@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping List</title>
-    <link rel="stylesheet" href="css/shopping-list.css">
+    <link rel="stylesheet" href="css/shopping-list.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4c58d39949.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="Header">
         <div class="Logo">
-            <img src="images/logo.png" alt="Logo">
+            <img src="images/logo.png" alt="Delish Nutrio Logo">
         </div>
 
-        <h1>Meal Plan</h1>
+        <h1>Shopping List</h1>
 
         <div class="search-bar">
-            <input type="text" placeholder="Search for something">
+            <input type="text" id="searchInput" placeholder="Search items...">
         </div>
 
         <div class="right-header">
@@ -29,9 +29,11 @@
 
     <main class="main-content">
         <div class="shopping-list-container">
-            <div class="shopping-list-section">
-                <table>
-                    <tr class="table-head">
+            <h2>My Shopping List</h2>
+
+            <table class="shopping-list">
+                <thead>
+                    <tr>
                         <th>SL NO</th>
                         <th>ITEMS</th>
                         <th>STORE</th>
@@ -39,86 +41,47 @@
                         <th>UNIT</th>
                         <th>UNIT PRICE</th>
                         <th>TOTAL</th>
+                        <th>ACTIONS</th>
                     </tr>
+                </thead>
+                <tbody id="shoppingListTableBody">
+                    </tbody>
+                <tfoot>
                     <tr>
-                        <td>01.</td>
-                        <td>Apples</td>
-                        <td>Farmer's Market</td>
-                        <td>Produce</td>
-                        <td>1 kg</td>
-                        <td>$3</td>
-                        <td>$3</td>
+                        <td colspan="6">Total</td>
+                        <td id="totalPrice"></td>
                     </tr>
-                    <tr>
-                        <td>02.</td>
-                        <td>Bread</td>
-                        <td>Bakery</td>
-                        <td>Bakery</td>
-                        <td>1 loaf</td>
-                        <td>$2</td>
-                        <td>$2</td>
-                    </tr>
-                    <tr>
-                        <td>03.</td>
-                        <td>Milk</td>
-                        <td>Supermarket</td>
-                        <td>Dairy</td>
-                        <td>1 liter</td>
-                        <td>$1.50</td>
-                        <td>$3</td>
-                    </tr>
-                    <tr>
-                        <td>04.</td>
-                        <td>Chicken Breast</td>
-                        <td>Butcher</td>
-                        <td>Meat</td>
-                        <td>500 g</td>
-                        <td>$5</td>
-                        <td>$10</td>
-                    </tr>
-                    <tr>
-                        <td>05.</td>
-                        <td>Rice</td>
-                        <td>Supermarket</td>
-                        <td>Grains</td>
-                        <td>2 kg</td>
-                        <td>$4</td>
-                        <td>$8</td>
-                    </tr>
-                    <tr>
-                        <td>06.</td>
-                        <td>Carrots</td>
-                        <td>Farmer's Market</td>
-                        <td>Produce</td>
-                        <td>1 kg</td>
-                        <td>$2</td>
-                        <td>$2</td>
-                    </tr>
-                    <tr>
-                        <td>07.</td>
-                        <td>Eggs</td>
-                        <td>Supermarket</td>
-                        <td>Dairy</td>
-                        <td>1 dozen</td>
-                        <td>$2</td>
-                        <td>$2</td>
-                    </tr>
-                    <tr>
-                        <td>08.</td>
-                        <td>Butter</td>
-                        <td>Supermarket</td>
-                        <td>Dairy</td>
-                        <td>500 g</td>
-                        <td>$4</td>
-                        <td>$4</td>
-                    </tr>
-                    <tr class="total">
-                        <td>Total</td>
-                        <td colspan="6">$34</td>
-                    </tr>
-                </table>
+                </tfoot>
+            </table>
+
+            <div class="list-actions">
+                <button class="clear-list">Clear List</button>
             </div>
         </div>
+
+        <div class="add-item-form">
+            <h3>Add Item</h3>
+            <input type="text" id="itemName" placeholder="Item Name">
+            <select id="itemStore">
+                <option value="Supermarket">Supermarket</option>
+                <option value="Farmer's Market">Farmer's Market</option>
+                <option value="Grocery Store">Grocery Store</option>
+                <option value="Other">Other</option>
+            </select>
+            <select id="itemCategory">
+                <option value="Produce">Produce</option>
+                <option value="Meat">Meat</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Bakery">Bakery</option>
+                <option value="Grains">Grains</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="text" id="itemUnit" placeholder="Unit (e.g., kg, pcs)">
+            <input type="number" id="itemUnitPrice" placeholder="Unit Price">
+            <button id="addItemBtn">Add Item</button>
+        </div>
     </main>
+
+    <script src="js/shopping-list.js"></script> 
 </body>
 </html>
