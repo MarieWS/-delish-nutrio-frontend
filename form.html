@@ -51,6 +51,13 @@
                 <img class="logo" src="delish nutrio logo.jpg" alt="logo" width="100px" height="100px">
                 <h2 class="logo-text">Complete this form in order to fully <br> <span class="logo-setup">Set up</span> your account</h2>
             </div>
+            <div>
+            <form action="/action_page.php">
+  <label for="username">Username: </label>
+  <input type="text" id="username" name="username"><br>
+  <input type="submit" value="Submit">
+            </form>
+            </div>
             <div class="form-section">
                 <div class="inner-form-section">
                     <form id="setup-form">
@@ -140,7 +147,7 @@
             const data = {};
             formData.forEach((value, key) => data[key] = value);
             
-            fetch('http://delish-nutrio.onrender.com/api/profile', {
+            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/profile', {
                 method: 'GET',
                 headers: {
                     'accept': 'application/json'
@@ -171,7 +178,7 @@
         }
 
         function signUp(data) {
-            fetch('http://delish-nutrio.onrender.com/api/signup', {
+            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -188,7 +195,7 @@
         }
 
         function logIn(data) {
-            fetch('http://delish-nutrio.onrender.com/api/login', {
+            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -205,7 +212,7 @@
         }
 
         function updateProfile(data) {
-            fetch('http://delish-nutrio.onrender.com/api/updateprofile', {
+            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/updateprofile', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -222,7 +229,7 @@
         }
 
         function generateMeal() {
-            fetch('http://delish-nutrio.onrender.com/api/generatemeal', {
+            fetch('http://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/generatemeal', {
                 method: 'GET',
                 headers: {
                     'accept': 'application/json'
