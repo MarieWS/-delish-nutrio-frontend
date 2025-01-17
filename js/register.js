@@ -7,7 +7,7 @@ registerForm.addEventListener('submit', async (event) => {
   const data = Object.fromEntries(formData);
 
   try {
-    const response = await fetch('https://techcrush-backend.netlify.app/.netlify/functions/register', { 
+    const response = await fetch('https://techcrushbackend-85eulpiau-maries-projects-0395c141.vercel.app/api/register', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
