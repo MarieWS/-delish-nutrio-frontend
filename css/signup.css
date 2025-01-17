@@ -1,73 +1,130 @@
-
-* {box-sizing: border-box}
-
-/* Full-width input fields */
-  input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(120deg, #007bff, #d0314c);
+  height: 100vh;
+  overflow: hidden;
 }
 
-input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 29vw;
+  background: white;
+  border-radius: 10px;
+}
+
+.center h1{
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.txt_field input{
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
   outline: none;
 }
 
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:Valid ~ span::before{
   width: 100%;
-  opacity: 0.9;
 }
 
-button:hover {
-  opacity:1;
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
+.pass:hover{
+  text-decoration: underline;
 }
 
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
+input[type="Submit"]{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+
 }
 
-/* Add padding to container elements */
-.container {
-  padding: 16px;
+input[type="Submit"]:hover{
+  background: #2691d9;
+  color: #e9f4fb;
+  transition: .5s;
 }
 
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
 }
 
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }
+.signup_link a{
+  color: #2691d9;
+  text-decoration: none;
 }
 
+.signup_link a:hover{
+  text-decoration: underline;
+}
+
+.HomeAbout{
+  width: 100vw;
+  height: 25vh;
+}
 /* Responsive font size */
 h1 {
     font-size: clamp(1.5rem, 2.5vw, 3rem);
