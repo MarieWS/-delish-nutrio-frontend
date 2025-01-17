@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progress Tracker</title>
-    <link rel="stylesheet" href="css/progress-tracker.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/progress-tracker.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4c58d39949.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Added link to icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
 <body>
     <header class="Header">
@@ -15,7 +15,7 @@
             <img src="images/logo.png" alt="Logo">
         </div>
 
-        <h1>Meal Plan</h1>
+        <h1>Progress Tracker</h1>
 
         <div class="search-bar">
             <input type="text" placeholder="Search for something">
@@ -28,20 +28,57 @@
         </div>
     </header>
 
+    <nav>
+        <ul>
+            <li><img src="left panel images/dashboard.png" alt="Dashboard"><a href="dashboard.html">Dashboard</a></li>
+            <li class="active"><img src="left panel images/progress-tracker.png" alt="Progress Tracker"><a href="progress-tracker.html">Progress Tracker</a></li>
+            <li><img src="left panel images/meal-plan.png" alt="Meal Plan"><a href="meal-plan.html">Meal Plan</a></li>
+            <li><img src="left panel images/recipe.png" alt="Recipe"><a href="#">Recipe</a></li>
+            <li><img src="left panel images/shopping-list.png" alt="Shopping List"><a href="shopping-list.html">Shopping List</a></li>
+            <li><img src="left panel images/community.png" alt="Community"><a href="community.html">Community</a></li>
+        </ul>
+    </nav>
+
     <main class="main-content">
        <div class="grid-container">
             <div>
-                <h2>Your Current Health <br>Status</h2>
-                <div class="Holder"><img src="./Images/Car Information.jpg" alt="" width="100%"></div>
+                <h2>Your Current Health Status</h2>
+                <div class="health-data">
+                    <div class="data-point">
+                        <i class="fas fa-weight"></i> <span>Weight: 70 kg</span>
+                    </div>
+                    <div class="data-point">
+                        <i class="fas fa-fire"></i> <span>Calories Burned: 1800 kcal</span>
+                    </div>
+                    <div class="data-point">
+                        <i class="fas fa-heartbeat"></i> <span>Heart Rate: 72 bpm</span> 
+                    </div> 
+                </div>
                 <h3 class="Wap">Weekly Activity Progress</h3>
-                <div class="Holder"><img src="./Images/Group 240.jpg" alt="" width="100%"></div>
+                <canvas id="activityChart"></canvas> 
             </div>
             <div>
-                <img src="./Images/Frame 427319296.jpg" alt="">
+                <img src="./Images/health-graph.png" alt="Health Progress Graph"> 
             </div>
             <div>
+                <h2>Recent Activity</h2>
+                <ul class="activity-list">
+                    <li>
+                        <i class="fas fa-running"></i> 30-minute jog 
+                    </li>
+                    <li>
+                        <i class="fas fa-dumbbell"></i> Strength training session 
+                    </li>
+                    <li>
+                        <i class="fas fa-walking"></i> 2-mile walk
+                    </li>
+                </ul>
             </div>
        </div>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="progress-tracker.js"></script> 
+
 </body>
 </html>
