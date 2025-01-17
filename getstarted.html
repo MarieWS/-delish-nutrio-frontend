@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delish Nutrio</title>
     <link rel="stylesheet" href="css/getstarted.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
 </head>
 <body>
     <header>
@@ -27,23 +29,24 @@
     </header>
 
     <div class="container">
-        <div class="heading">
+        <div class="heading" data-aos="fade-down" data-aos-duration="1000"> 
             <div class="Logo">
                 <img src="./Image/Delish Nutrio 1.png" alt="Company Logo" class="logo">
             </div>
         </div>
-        <div class="title">
+        <div class="title" data-aos="fade-up" data-aos-duration="1000">
             <img class="icon" src="./Image/hand sign.png" alt="hand sign icon">
             <span>Welcome to </span>
             <h4> Delish Nutrio</h4><br>
         </div>
-        <div class="paragraph">
-            <h6>Discover personalized nutrition solutions, expert guidance to help you reach your health and wellness goals</h6>
+        <div class="paragraph" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"> 
+            <h6>Discover personalized nutrition solutions, expert guidance to help you reach your health and wellness goals. 
+                <span class="unique">Experience the difference with our AI-powered nutritionist.</span> </h6> 
         </div>
         <div class="image-container">
-            <img src="./Image/meal planning.png" alt="meal planning" class="meal-planning">
-            <img src="./Image/meal recipe finder.png" alt="meal recipe finder" class="meal-recipe-finder">
-            <img src="./Image/health progress tracking.png" alt="health progress tracker" class="health-progress-tracker">
+            <img src="./Image/meal planning.png" alt="meal planning" class="meal-planning" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+            <img src="./Image/meal recipe finder.png" alt="meal recipe finder" class="meal-recipe-finder" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+            <img src="./Image/health progress tracking.png" alt="health progress tracker" class="health-progress-tracker" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="800">
         </div>
         <div class="tablemenu">
             <div class="Image-title01">
@@ -56,11 +59,29 @@
                 <div>Health Progress Tracking</div>
             </div>
         </div>
-        <div class="button">
+        <div class="button" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000">
             <a href="form.html">
                 <input type="button" value="GET STARTED">
             </a>
         </div>
+
+        <div class="testimonials" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200"> 
+            <p>"Delish Nutrio has completely transformed my relationship with food. Their personalized plans and expert guidance have made healthy eating enjoyable and sustainable."</p>
+            <p>- John Doe</p>
+        </div>
+
+        <div class="partners" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400"> 
+            <img src="assets/partners/partner1.png" alt="Partner 1">
+            <img src="assets/partners/partner2.png" alt="Partner 2">
+            <img src="assets/partners/partner3.png" alt="Partner 3">
+        </div>
+
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
